@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-nav .hamburger {
+    padding-right: 1em;
+  }
+}
