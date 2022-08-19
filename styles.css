@@ -71,4 +71,77 @@
   .intro-geo {
     width: 100%;
   }
+
+  .project h2 {
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    padding: 0.5em;
+  }
+
+  /* .project .card-container {
+    border: 1px solid goldenrod;
+  } */
+
+  .card-container .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container .card img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .card-container .card .card-description {
+    background-color: #1a2236;
+    padding: 1.5em;
+  }
+
+  .card-container .card .card-description > * {
+    margin: 1em 0;
+  }
+
+  .card .card-description p {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .card .card-description ul {
+    display: flex;
+  }
+
+  .card .card-description ul li {
+    list-style: none;
+    background-color: #98DEDE;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10.3334px;
+    margin-right: 1em;
+    padding: 1em;
+  }
+
+  .card .card-description button {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    height: 3em;
+    width: 60%;
+
+  }
+
+  .card .card-description button img {
+    width: 2em;
+    height: 1em;
+    padding-top: 5px;
+  }
 }
