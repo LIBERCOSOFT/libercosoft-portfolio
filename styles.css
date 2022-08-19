@@ -80,9 +80,10 @@
     padding: 0.5em;
   }
 
-  /* .project .card-container {
-    border: 1px solid goldenrod;
-  } */
+  .project .card-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
 
   .card-container .card {
     display: flex;
