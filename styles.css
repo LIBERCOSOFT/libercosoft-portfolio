@@ -319,4 +319,30 @@
     font-size: 14px;
     line-height: 21px;
   }
+
+  footer {
+    background-color: #1A2236;
+    margin-top: 1em;
+    padding: 2em;
+  }
+  footer button {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 24px;
+    color: #92DCDC;
+    background-color: inherit;
+    border: none;
+    margin-bottom: 1em;
+  }
+  footer button img {
+    width: 2em;
+    height: 1em;
+    padding-left: 0.5em;
+  }
+  footer .socials {
+    display: flex;
+    justify-content: space-between;
+  }
 }
