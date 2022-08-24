@@ -356,3 +356,36 @@
     justify-content: space-between;
   }
 }
+
+/* Desktopp */
+@media screen and (min-width: 769px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .desktop-header {
+    padding: 2em 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0.5px 0 #dddfe6;
+  }
+
+  .desktop-header nav {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    padding: 0.1em;
+  }
+
+  .desktop-header nav a {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .desktop-header nav a:first-child {
+    border-bottom: 2px solid #1a2236;
+  }
+}
