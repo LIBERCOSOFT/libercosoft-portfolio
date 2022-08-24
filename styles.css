@@ -41,10 +41,28 @@
     margin: 1em 0;
   }
 
-  .introduction .collaboration,
-  .about .get-cv,
-  .form form .contact-collaboration {
-    text-align: center;
+  footer button {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 24px;
+    color: #92dcdc;
+    background-color: inherit;
+    border: none;
+    margin-bottom: 1em;
+  }
+
+  .card .card-description button {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    height: 3em;
+    width: 60%;
   }
 
   .introduction .collaboration button,
@@ -61,18 +79,6 @@
     color: #fff;
   }
 
-  .card .card-description button {
-    background-color: #1a2236;
-    color: #fff;
-    border: 1px solid #fff;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1em;
-    height: 3em;
-    width: 60%;
-  }
-
   .card .card-description button:hover {
     background-color: #fff;
     color: #1a2236;
@@ -80,6 +86,13 @@
   }
 
   .card .card-description button:focus {
+    background-color: #fff;
+    color: #1a2236;
+    border: 2px solid #1a2236;
+  }
+
+  .introduction .collaboration button:focus,
+  .about .get-cv button:focus {
     background-color: #fff;
     color: #1a2236;
     border: 2px solid #1a2236;
@@ -93,12 +106,16 @@
     border: 1px solid #1a2236;
   }
 
-  .introduction .collaboration button:focus,
-  .about .get-cv button:focus,
   .form form .contact-collaboration button:focus {
     background-color: #fff;
     color: #1a2236;
     border: 2px solid #1a2236;
+  }
+
+  .introduction .collaboration,
+  .about .get-cv,
+  .form form .contact-collaboration {
+    text-align: center;
   }
 
   .intro-geo {
@@ -123,6 +140,12 @@
     flex-direction: column;
   }
 
+  footer button img {
+    width: 2em;
+    height: 1em;
+    padding-left: 0.5em;
+  }
+
   .card-container .card img {
     width: 100%;
     margin-bottom: 0;
@@ -143,6 +166,16 @@
     font-weight: 400;
     font-size: 14px;
     margin-bottom: 1em;
+  }
+
+  .form p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    padding: 0 2em;
   }
 
   .card .card-description p {
@@ -261,16 +294,6 @@
     padding: 0.5em 0.5em 0.2em 0.5em;
   }
 
-  .form p {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: -0.01em;
-    padding: 0 2em;
-  }
-
   .form form {
     padding: 2em;
     display: flex;
@@ -300,7 +323,7 @@
 
   .form fieldset input {
     border: none;
-    font-family: 'Poppins';
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -321,26 +344,11 @@
   }
 
   footer {
-    background-color: #1A2236;
+    background-color: #1a2236;
     margin-top: 1em;
     padding: 2em;
   }
-  footer button {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1em;
-    line-height: 24px;
-    color: #92DCDC;
-    background-color: inherit;
-    border: none;
-    margin-bottom: 1em;
-  }
-  footer button img {
-    width: 2em;
-    height: 1em;
-    padding-left: 0.5em;
-  }
+
   footer .socials {
     display: flex;
     justify-content: space-between;
