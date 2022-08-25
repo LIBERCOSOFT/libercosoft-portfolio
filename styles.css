@@ -355,11 +355,20 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .desktop-header,
+  .introduction-desktop,
+  .project-desktop {
+    display: none;
+  }
 }
 
-/* Desktopp */
+/* Desktop */
 @media screen and (min-width: 769px) {
-  .mobile-header {
+  .mobile-header,
+  .introduction,
+  .project,
+  main figure {
     display: none;
   }
 
@@ -387,5 +396,59 @@
 
   .desktop-header nav a:first-child {
     border-bottom: 2px solid #1a2236;
+  }
+
+  .introduction-desktop {
+    display: flex;
+  }
+
+  .introduction-desktop .introduction-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('assets/img/image_dots.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 102px;
+    padding: 0 5em;
+  }
+
+  .introduction-texts h1 {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 100%;
+  }
+
+  .introduction-texts p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    margin-top: 3em;
+  }
+
+  .introduction-texts .collaboration button {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    background-color: #1a2236;
+    color: #fff;
+    padding: 1em 1.2em;
+    margin-top: 4em;
+  }
+
+  .introduction-desktop .hero-geometry {
+    width: 90%;
+  }
+
+  .introduction-desktop .hero-geometry img {
+    width: 100%;
   }
 }
