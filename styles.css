@@ -358,7 +358,8 @@
 
   .desktop-header,
   .introduction-desktop,
-  .project-desktop {
+  .project-desktop,
+  footer button #desktop-download-icon {
     display: none;
   }
 }
