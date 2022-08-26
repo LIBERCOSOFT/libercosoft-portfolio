@@ -347,33 +347,39 @@
             </p>
           </header>
           <form action="https://formspree.io/f/mlevdgwe" method="post">
+            <div class="desktop-style">
+              <fieldset>
+                <label for="name">Your name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Kolapo Precious"
+                  maxlength="30"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="email">Your email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="kolapoprecious@email.com"
+                  required
+                />
+              </fieldset>
+            </div>
             <fieldset>
-              <label for="name">Your name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Kolapo Precious"
-                maxlength="30"
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                maxlength="500"
+                id="message"
+                placeholder="Enter your message here..."
                 required
-              />
+              ></textarea>
             </fieldset>
-            <fieldset>
-              <label for="email">Your email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="kolapoprecious@email.com"
-                required
-              />
-            </fieldset>
-            <textarea
-              name="message"
-              maxlength="500"
-              placeholder="Enter your message here..."
-              required
-            ></textarea>
             <div class="contact-collaboration">
               <button type="submit" name="submit">Start collaboration</button>
             </div>
