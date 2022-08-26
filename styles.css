@@ -369,6 +369,7 @@
   .introduction,
   .project,
   .form header img,
+  footer button #mobile-download-icon,
   main figure {
     display: none;
   }
@@ -824,5 +825,33 @@
     font-size: 18px;
     line-height: 27px;
     padding: 1em;
+  }
+
+  footer {
+    background-color: #1a2236;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 10em;
+  }
+
+  footer button {
+    background-color: inherit;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
+  footer button img {
+    width: 2em;
+    height: 1em;
+    padding-left: 0.5em;
+  }
+
+  footer .socials a {
+    padding-left: 2em;
   }
 }
