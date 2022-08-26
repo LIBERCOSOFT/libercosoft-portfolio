@@ -420,6 +420,7 @@
     font-weight: 400;
     font-size: 110px;
     line-height: 100%;
+    padding-top: 1em;
   }
 
   .introduction-texts p {
@@ -445,10 +446,286 @@
   }
 
   .introduction-desktop .hero-geometry {
-    width: 90%;
+    width: 100%;
   }
 
   .introduction-desktop .hero-geometry img {
     width: 100%;
+  }
+
+  .project-desktop .flex-wrapper {
+    display: flex;
+    margin-top: 10em;
+  }
+
+  .project-desktop header {
+    display: inline-flex;
+    background-image: url('assets/img/image_dots.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    background-size: 102px;
+  }
+
+  .project-desktop h2 {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 100%;
+    transform: rotate(-90deg);
+    height: 3em;
+    margin-top: 0.25em;
+  }
+
+  .project-desktop .card {
+    background-image: url('assets/img/card-1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-desktop .card .card-description {
+    background-color: rgba(26, 34, 54, 0.95);
+    padding: 4em;
+    margin-top: 13em;
+  }
+
+  .card .card-description p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #fff;
+  }
+
+  .card .card-description ul {
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 4em;
+  }
+
+  .card .card-description ul li {
+    list-style: none;
+    background-color: #98dede;
+    padding: 0.5em;
+    margin-right: 1em;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .card .card-description button {
+    font-family: 'Poppins', Arial, Helvetica, sans-serifs;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0.5em;
+  }
+
+  .card .card-description button img {
+    width: 1em;
+  }
+
+  .project-desktop .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .project-desktop .grid-container > * {
+    width: 100%;
+    border: 2px solid indigo;
+  }
+
+  .project-desktop .grid-container #laptop-1 {
+    position: relative;
+    top: 10%;
+  }
+
+  .desktop-card {
+    background-image: url('assets/img/card-6.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-card #laptop-2 {
+    margin: 0;
+  }
+
+  .desktop-card .desktop-card-description {
+    position: relative;
+    top: 10%;
+  }
+
+  .desktop-card .desktop-card-description .desktop-description {
+    background-color: rgba(26, 34, 54, 0.95);
+    padding: 2em;
+  }
+
+  .desktop-card .desktop-card-description p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+  }
+
+  .desktop-card .desktop-card-description ul {
+    display: flex;
+    padding: 1em 0;
+  }
+
+  .desktop-card .desktop-card-description ul li {
+    list-style: none;
+    background-color: #98dede;
+    padding: 0.5em;
+    margin-right: 1em;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .desktop-card .desktop-card-description button {
+    font-family: 'Poppins', Arial, Helvetica, sans-serifs;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0.5em;
+  }
+
+  .desktop-card .desktop-card-description button img {
+    width: 1em;
+  }
+
+  .grid-container #laptop-3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    position: relative;
+    bottom: 75%;
+    padding-right: 9.5em;
+  }
+
+  .grid-container #geo-design-2,
+  #geo-design-3 {
+    height: 6em;
+    width: 6em;
+  }
+
+  .grid-container #geo-design-2 {
+    position: relative;
+    right: 33%;
+    top: 5em;
+  }
+
+  .grid-container .design-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .about .skills-wrapper {
+    display: grid;
+    grid-template-columns: 18em 18em;
+    padding: 10em 5em;
+  }
+
+  .about .skills-wrapper section ul li {
+    list-style: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.0525em;
+  }
+
+  .about .skills-wrapper .languages {
+    background-color: #1c528a;
+    height: 18em;
+    background-image: url('assets/img/ic_languages_mob.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 102px;
+    color: #fff;
+    padding: 3em;
+  }
+
+  .about .skills-wrapper .frameworks {
+    background-color: #e2505c;
+    height: 18em;
+    background-image: url('assets/img/ic_framework.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 102px;
+    color: #fff;
+    padding: 3em;
+  }
+
+  .about .skills-wrapper .skills {
+    background-color: #febf52;
+    height: 18em;
+    background-image: url('assets/img/ic_skills.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 102px;
+    color: #fff;
+    padding: 3em;
+  }
+
+  .about .skills-wrapper .desktop-design {
+    background-image: url('assets/img/image_dots_with_teal.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 222px;
+    color: #fff;
+    padding: 3em;
+  }
+
+  .about .about-description {
+    padding: 10em 5em;
+  }
+
+  .about .about-description h2 {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110px;
+  }
+
+  .about .about-description p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    padding-bottom: 2em;
+  }
+
+  .about-description .get-cv button {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #1a2236;
+    color: #fff;
+    padding: 1em 2.5em;
+  }
+
+  .about .get-cv button img {
+    width: 2em;
+    height: 1em;
+    padding-left: 0.5em;
   }
 }
