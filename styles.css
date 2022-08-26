@@ -534,37 +534,47 @@
   .project-desktop .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    text-align: left;
   }
   .project-desktop .grid-container > * {
     width: 100%;
-    border: 2px solid indigo;
   }
 
   .project-desktop .grid-container #laptop-1 {
     position: relative;
-    top: 10%;
+    top: 18%;
+    width: 100%;
+  }
+
+  .project-desktop .grid-container #laptop-grid-geo {
+    width: 100%;
   }
 
   .desktop-card {
-    background-image: url('assets/img/card-6.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-  }
-
-  .desktop-card #laptop-2 {
-    margin: 0;
+    position: absolute;
   }
 
   .desktop-card .desktop-card-description {
-    position: relative;
-    top: 10%;
+    position: absolute;
+    right: 0;
+    width: 33.33%;
   }
 
   .desktop-card .desktop-card-description .desktop-description {
     background-color: rgba(26, 34, 54, 0.95);
     padding: 2em;
+    position: relative;
+    margin-top: 3em;
+  }
+
+  .desktop-card .desktop-card-description #laptop-2 {
+    width: 100%;
+    display: block;
+  }
+
+  .desktop-card .desktop-card-description #geo-design-3 {
+    float: right;
   }
 
   .desktop-card .desktop-card-description p {
@@ -603,29 +613,32 @@
     width: 1em;
   }
 
-  .grid-container #laptop-3 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    position: relative;
-    bottom: 75%;
-    padding-right: 9.5em;
+  .grid-container span {
+    grid-column: 1 / span 2;
+    background-image: url('assets/img/design-geometry-2.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
   }
 
-  .grid-container #geo-design-2,
-  #geo-design-3 {
-    height: 6em;
-    width: 6em;
+  .grid-container .design-div-two {
+    width: 100%;
+    background-image: url('assets/img/right-image-geometry_5.svg');
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
   }
 
-  .grid-container #geo-design-2 {
-    position: relative;
-    right: 33%;
-    top: 5em;
+  .grid-container .design-div-three {
+    width: 100%;
+    background-image: url('assets/img/left-image-geometry_4.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
   }
 
-  .grid-container .design-div {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  .grid-container #last-image-grid {
+    width: 70%;
   }
 
   .about {
