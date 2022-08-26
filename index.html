@@ -2,15 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LIBERCOSOFT</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <div class="wrapper">
-      <header>
+      <header class="mobile-header">
         <nav class="top-nav">
           <a href="#">
             <img src="assets/img/top-nav-geometry.svg" alt="geometry design" />
@@ -20,6 +29,14 @@
             src="assets/img/ic_menu.svg"
             alt="hamburger menu"
           />
+        </nav>
+      </header>
+      <header class="desktop-header">
+        <nav>
+          <a>Hello</a>
+          <a>Portfolio</a>
+          <a>About</a>
+          <a>Contact</a>
         </nav>
       </header>
       <main>
@@ -39,6 +56,32 @@
           </p>
           <div class="collaboration">
             <button type="button">Start collaboration</button>
+          </div>
+        </section>
+        <section class="introduction-desktop">
+          <div class="introduction-texts">
+            <header>
+              <h1>
+                Kolapo Precious
+                <br />
+                Akinrinlola
+              </h1>
+            </header>
+            <p>
+              Hello! I am a software developer! I can help you build a product,
+              feature or website. Take a look of my works. If you like what you
+              see and have a project you need coded, don’t hesitate and contact
+              me.
+            </p>
+            <div class="collaboration">
+              <button type="button">Start collaboration</button>
+            </div>
+          </div>
+          <div class="hero-geometry">
+            <img
+              src="assets/img/desktop_hero_geometry.svg"
+              alt="hero design image"
+            />
           </div>
         </section>
         <figure>
@@ -163,57 +206,153 @@
             </div>
           </div>
         </section>
+        <section class="project-desktop">
+          <div class="flex-wrapper">
+            <header>
+              <h2>Projects</h2>
+            </header>
+            <div class="card">
+              <div class="card-description">
+                <p>Project name goes here</p>
+                <ul>
+                  <li>HTML/CSS</li>
+                  <li>Ruby on Rails</li>
+                  <li>JavaScript</li>
+                </ul>
+                <button type="button">
+                  See this project
+                  <img
+                    src="assets/img/desktop_ic_arrow_right.svg"
+                    alt="right arrow icon"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="grid-container">
+            <div>
+              <img
+                src="assets/img/laptop-1.svg"
+                id="laptop-1"
+                alt="laptop photo"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/img/grid-image-geometry.svg"
+                alt="laptop photo"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/img/card-6.svg"
+                id="laptop-grid-geo"
+                alt="laptop photo"
+              />
+            </div>
+            <div id="large-image">
+              <img
+                src="assets/img/laptop-3.svg"
+                id="laptop-3"
+                alt="laptop photo"
+              />
+            </div>
+
+            <div class="design-div-one"></div>
+            <div class="design-div-two"></div>
+            <div class="design-div-three"></div>
+            <img
+              src="assets/img/laptop-4.svg"
+              id="last-image-grid"
+              alt="geometric design"
+            />
+            <div class="desktop-card">
+              <div class="desktop-card-description">
+                <div class="desktop-description">
+                  <p>Project name goes...</p>
+                  <ul>
+                    <li>HTML/CSS</li>
+                    <li>Ruby on Rails</li>
+                    <li>+1</li>
+                  </ul>
+                  <button type="button">
+                    See this project
+                    <img
+                      src="assets/img/desktop_ic_arrow_right.svg"
+                      alt="right arrow icon"
+                    />
+                  </button>
+                </div>
+                <img
+                  src="assets/img/laptop-2.svg"
+                  id="laptop-2"
+                  alt="laptop photo"
+                />
+                <img
+                  src="assets/img/design-geometry-3.svg"
+                  id="geo-design-3"
+                  alt="geometric design"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="about">
-          <div>
-            <h2>About</h2>
+          <div class="about-description">
+            <header>
+              <h2>About</h2>
+            </header>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ea eiusmod
+            </p>
+            <div class="get-cv">
+              <button type="button">
+                Get my CV
+                <img src="assets/img/download.svg" alt="download icon" />
+              </button>
+            </div>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ea eiusmod
-          </p>
-          <div class="get-cv">
-            <button type="button">
-              Get my CV
-              <img src="assets/img/download.svg" alt="download icon" />
-            </button>
+          <div class="skills-wrapper">
+            <section class="languages">
+              <header>
+                <h3>Languages</h3>
+              </header>
+              <ul>
+                <li>&#8226; JavaScript(ES5/ES6)</li>
+                <li>&#8226; Ruby</li>
+                <li>&#8226; HTML</li>
+                <li>&#8226; CSS</li>
+              </ul>
+            </section>
+            <section class="frameworks">
+              <header>
+                <h3>Frameworks</h3>
+              </header>
+              <ul>
+                <li>&#8226; Bootstrap</li>
+                <li>&#8226; Ruby on rails</li>
+                <li>&#8226; RSpec</li>
+                <li>&#8226; Capibara</li>
+                <li>&#8226; Selenium</li>
+              </ul>
+            </section>
+            <section class="skills">
+              <header>
+                <h3>Skills</h3>
+              </header>
+              <ul>
+                <li>&#8226; Codekit</li>
+                <li>&#8226; Codepen</li>
+                <li>&#8226; Github</li>
+                <li>&#8226; GitLAb</li>
+                <li>&#8226; Terminal</li>
+              </ul>
+            </section>
+            <div class="desktop-design"></div>
           </div>
-          <section class="languages">
-            <div>
-              <h3>Languages</h3>
-            </div>
-            <ul>
-              <li>&#8226; JavaScript(ES5/ES6)</li>
-              <li>&#8226; Ruby</li>
-              <li>&#8226; HTML</li>
-              <li>&#8226; CSS</li>
-            </ul>
-          </section>
-          <section class="frameworks">
-            <div>
-              <h3>Frameworks</h3>
-            </div>
-            <ul>
-              <li>&#8226; Bootstrap</li>
-              <li>&#8226; Ruby on rails</li>
-              <li>&#8226; RSpec</li>
-              <li>&#8226; Capibara</li>
-              <li>&#8226; Selenium</li>
-            </ul>
-          </section>
-          <section class="skills">
-            <div>
-              <h3>Skills</h3>
-            </div>
-            <ul>
-              <li>&#8226; Codekit</li>
-              <li>&#8226; Codepen</li>
-              <li>&#8226; Github</li>
-              <li>&#8226; GitLAb</li>
-              <li>&#8226; Terminal</li>
-            </ul>
-          </section>
         </section>
         <section class="form">
           <header>
@@ -225,33 +364,39 @@
             </p>
           </header>
           <form action="https://formspree.io/f/mlevdgwe" method="post">
+            <div class="desktop-style">
+              <fieldset>
+                <label for="name">Your name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Kolapo Precious"
+                  maxlength="30"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="email">Your email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="kolapoprecious@email.com"
+                  required
+                />
+              </fieldset>
+            </div>
             <fieldset>
-              <label for="name">Your name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Kolapo Precious"
-                maxlength="30"
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                maxlength="500"
+                id="message"
+                placeholder="Enter your message here..."
                 required
-              />
+              ></textarea>
             </fieldset>
-            <fieldset>
-              <label for="email">Your email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="kolapoprecious@email.com"
-                required
-              />
-            </fieldset>
-            <textarea
-              name="message"
-              maxlength="500"
-              placeholder="Enter your message here..."
-              required
-            ></textarea>
             <div class="contact-collaboration">
               <button type="submit" name="submit">Start collaboration</button>
             </div>
@@ -260,7 +405,16 @@
         <footer>
           <button type="button">
             Get my Resume
-            <img src="assets/img/ic_link_teal.svg" alt="download icon" />
+            <img
+              src="assets/img/ic_link_teal.svg"
+              id="mobile-download-icon"
+              alt="download icon"
+            />
+            <img
+              src="assets/img/download.svg"
+              id="desktop-download-icon"
+              alt="download icon"
+            />
           </button>
           <div class="socials">
             <a>
