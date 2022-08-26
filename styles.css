@@ -365,6 +365,12 @@
 
 /* Desktop */
 @media screen and (min-width: 769px) {
+  footer button img {
+    width: 2em;
+    height: 1em;
+    padding-left: 0.5em;
+  }
+
   .mobile-header,
   .introduction,
   .project,
@@ -394,6 +400,10 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+  }
+
+  footer .socials a {
+    padding-left: 2em;
   }
 
   .desktop-header nav a:first-child {
@@ -435,6 +445,17 @@
     margin-top: 3em;
   }
 
+  footer button {
+    background-color: inherit;
+    border: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+  }
+
   .introduction-texts .collaboration button {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -446,6 +467,47 @@
     color: #fff;
     padding: 1em 1.2em;
     margin-top: 4em;
+  }
+
+  .card .card-description button {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0.5em;
+    border: 1px solid #1a2236;
+  }
+
+  .desktop-card .desktop-card-description button {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0.5em;
+    border: 1px solid #1a2236;
+  }
+
+  .about-description .get-cv button {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #1a2236;
+    border: 1px solid #1a2236;
+    color: #fff;
+    padding: 1em 2.5em;
+  }
+
+  .form .contact-collaboration button {
+    background-color: #1a2236;
+    border: 1px solid #1a2236;
+    color: #fff;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 1em;
   }
 
   .introduction-texts .collaboration button:hover,
@@ -511,8 +573,18 @@
     margin-top: 13em;
   }
 
+  .form header p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    padding: 2.5em 0;
+  }
+
   .card .card-description p {
-    font-family: 'Poppins';
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -530,19 +602,10 @@
     background-color: #98dede;
     padding: 0.5em;
     margin-right: 1em;
-    font-family: 'Poppins';
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
-  }
-
-  .card .card-description button {
-    font-family: 'Poppins', Arial, Helvetica, sans-serifs;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    padding: 0.5em;
-    border: 1px solid #1a2236;
   }
 
   .card .card-description button:hover,
@@ -569,6 +632,7 @@
     position: relative;
     text-align: left;
   }
+
   .project-desktop .grid-container > * {
     width: 100%;
   }
@@ -632,15 +696,6 @@
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
-  }
-
-  .desktop-card .desktop-card-description button {
-    font-family: 'Poppins', Arial, Helvetica, sans-serifs;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    padding: 0.5em;
-    border: 1px solid #1a2236;
   }
 
   .desktop-card .desktop-card-description button img {
@@ -747,6 +802,14 @@
     padding: 10em 5em;
   }
 
+  .form header h2 {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 100%;
+  }
+
   .about .about-description h2 {
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -755,23 +818,12 @@
   }
 
   .about .about-description p {
-    font-family: 'Poppins';
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
     padding-bottom: 2em;
-  }
-
-  .about-description .get-cv button {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    background-color: #1a2236;
-    border: 1px solid #1a2236;
-    color: #fff;
-    padding: 1em 2.5em;
   }
 
   .about .get-cv button img {
@@ -788,24 +840,6 @@
     padding: 10em 20em;
   }
 
-  .form header h2 {
-    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 110px;
-    line-height: 100%;
-  }
-
-  .form header p {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: -0.01em;
-    padding: 2.5em 0;
-  }
-
   .form fieldset {
     display: flex;
     flex-direction: column;
@@ -820,20 +854,6 @@
     justify-content: space-between;
   }
 
-  .form fieldset input:focus {
-    border: 1px solid #1a2236;
-  }
-
-  .form fieldset label {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #7d7c84;
-    padding-bottom: 0.5em;
-  }
-
   .form fieldset input {
     border: none;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -842,8 +862,21 @@
     font-size: 14px;
     outline-style: none;
     padding: 2em 1em;
-    border: 1px solid #e0e0e0;
     border-radius: 4px;
+  }
+
+  .form fieldset input:focus {
+    border: 1px solid #1a2236;
+  }
+
+  .form fieldset label {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #7d7c84;
+    padding-bottom: 0.5em;
   }
 
   .form textarea {
@@ -865,43 +898,10 @@
     margin-top: 3em;
   }
 
-  .form .contact-collaboration button {
-    background-color: #1a2236;
-    border: 1px solid #1a2236;
-    color: #fff;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    padding: 1em;
-  }
-
   footer {
     background-color: #1a2236;
     display: flex;
     justify-content: space-between;
     padding: 2em 10em;
-  }
-
-  footer button {
-    background-color: inherit;
-    border: none;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    color: #fff;
-  }
-
-  footer button img {
-    width: 2em;
-    height: 1em;
-    padding-left: 0.5em;
-  }
-
-  footer .socials a {
-    padding-left: 2em;
   }
 }
