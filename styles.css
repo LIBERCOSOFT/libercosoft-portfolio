@@ -442,9 +442,26 @@
     font-size: 18px;
     line-height: 27px;
     background-color: #1a2236;
+    border: 1px solid #1a2236;
     color: #fff;
     padding: 1em 1.2em;
     margin-top: 4em;
+  }
+
+  .introduction-texts .collaboration button:hover,
+  .about-description .get-cv button:hover,
+  .form .contact-collaboration button:hover {
+    background-color: #fff;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+  }
+
+  .introduction-texts .collaboration button:focus,
+  .about-description .get-cv button:focus,
+  .form .contact-collaboration button:focus {
+    background-color: #fff;
+    color: #1a2236;
+    border: 2px solid #1a2236;
   }
 
   .introduction-desktop .hero-geometry {
@@ -525,6 +542,21 @@
     font-weight: 500;
     font-size: 18px;
     padding: 0.5em;
+    border: 1px solid #1a2236;
+  }
+
+  .card .card-description button:hover,
+  .desktop-card .desktop-card-description button:hover {
+    background-color: #1a2236;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .card .card-description button:focus,
+  .desktop-card .desktop-card-description button:focus {
+    background-color: #1a2236;
+    color: #fff;
+    border: 2px solid #fff;
   }
 
   .card .card-description button img {
@@ -543,7 +575,7 @@
 
   .project-desktop .grid-container #laptop-1 {
     position: relative;
-    top: 18%;
+    top: 32%;
     width: 100%;
   }
 
@@ -575,6 +607,7 @@
 
   .desktop-card .desktop-card-description #geo-design-3 {
     float: right;
+    width: 175px;
   }
 
   .desktop-card .desktop-card-description p {
@@ -607,18 +640,20 @@
     font-weight: 500;
     font-size: 18px;
     padding: 0.5em;
+    border: 1px solid #1a2236;
   }
 
   .desktop-card .desktop-card-description button img {
     width: 1em;
   }
 
-  .grid-container span {
+  .grid-container #large-image {
     grid-column: 1 / span 2;
     background-image: url('assets/img/design-geometry-2.svg');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
+    background-size: 135px;
   }
 
   .grid-container .design-div-two {
@@ -734,6 +769,7 @@
     font-weight: 500;
     font-size: 18px;
     background-color: #1a2236;
+    border: 1px solid #1a2236;
     color: #fff;
     padding: 1em 2.5em;
   }
@@ -749,7 +785,7 @@
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: top;
-    padding: 10em 28em;
+    padding: 10em 20em;
   }
 
   .form header h2 {
@@ -831,6 +867,7 @@
 
   .form .contact-collaboration button {
     background-color: #1a2236;
+    border: 1px solid #1a2236;
     color: #fff;
     font-family: 'Poppins';
     font-style: normal;
