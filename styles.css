@@ -459,10 +459,6 @@
     background-position-y: bottom;
     background-size: 102px;
     padding: 0 5em;
-    animation: zoomin 1s linear 1;
-    animation-delay: 2s;
-    visibility: hidden;
-    animation-fill-mode: forwards;
   }
 
   .introduction-texts h1 {
@@ -472,6 +468,10 @@
     font-size: 110px;
     line-height: 100%;
     padding-top: 1em;
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
   }
 
   @keyframes zoomin {
