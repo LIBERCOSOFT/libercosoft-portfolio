@@ -31,6 +31,22 @@
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes zoomin {
+    0% {
+      transform: scale(0.5);
+      visibility: visible;
+    }
+
+    100% {
+      transform: scale(1);
+      visibility: visible;
+    }
   }
 
   .introduction p {
@@ -401,6 +417,24 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes movedown {
+    0% {
+      transform: translateY(-100px);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translateY(0);
+      visibility: visible;
+    }
   }
 
   footer .socials a {
