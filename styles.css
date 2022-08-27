@@ -567,6 +567,10 @@
     border: 1px solid #1a2236;
   }
 
+  footer .socials a img {
+    transition: transform 1s;
+  }
+
   .introduction-texts .collaboration button:focus,
   .about-description .get-cv button:focus,
   .form .contact-collaboration button:focus {
@@ -940,6 +944,10 @@
     line-height: 21px;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
+  }
+
+  footer .socials a img:hover {
+    transform: rotate(360deg);
   }
 
   .form .contact-collaboration {
