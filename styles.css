@@ -458,11 +458,11 @@
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
+    padding: 0 5em;
     animation: zoomin 1s linear 1;
     animation-delay: 2s;
     visibility: hidden;
     animation-fill-mode: forwards;
-    padding: 0 5em;
   }
 
   .introduction-texts h1 {
@@ -479,11 +479,13 @@
       transform: scale(0.5);
       visibility: visible;
     }
+
     100% {
       transform: scale(1);
       visibility: visible;
     }
   }
+
   .introduction-texts p {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
