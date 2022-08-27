@@ -31,6 +31,22 @@
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes zoomin {
+    0% {
+      transform: scale(0.5);
+      visibility: visible;
+    }
+
+    100% {
+      transform: scale(1);
+      visibility: visible;
+    }
   }
 
   .introduction p {
@@ -401,6 +417,24 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes movedown {
+    0% {
+      transform: translateY(-100px);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translateY(0);
+      visibility: visible;
+    }
   }
 
   footer .socials a {
@@ -434,6 +468,22 @@
     font-size: 110px;
     line-height: 100%;
     padding-top: 1em;
+    animation: zoomin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes zoomin {
+    0% {
+      transform: scale(0.5);
+      visibility: visible;
+    }
+
+    100% {
+      transform: scale(1);
+      visibility: visible;
+    }
   }
 
   .introduction-texts p {
@@ -517,6 +567,10 @@
     background-color: #fff;
     color: #1a2236;
     border: 1px solid #1a2236;
+  }
+
+  footer .socials a img {
+    transition: transform 1s;
   }
 
   .introduction-texts .collaboration button:focus,
@@ -892,6 +946,10 @@
     line-height: 21px;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
+  }
+
+  footer .socials a img:hover {
+    transform: rotate(360deg);
   }
 
   .form .contact-collaboration {
