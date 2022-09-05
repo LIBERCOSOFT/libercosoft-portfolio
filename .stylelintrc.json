@@ -1,6 +1,12 @@
 {
-  "extends": ["stylelint-config-standard"],
-  "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-csstree-validator"
+  ],
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": [
@@ -17,6 +23,10 @@
     ]
   },
   "csstree/validator": true,
-  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css"]
+  "ignoreFiles": [
+    "build/**",
+    "dist/**",
+    "**/reset*.css",
+    "**/bootstrap*.css"
+  ]
 }
-
