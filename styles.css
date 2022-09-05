@@ -94,6 +94,8 @@
   .dropdown-menu ul {
     padding: 3em 2em;
     list-style: none;
+    text-decoration: none;
+    color: inherit;
   }
 
   .dropdown-menu .mobile-nav-links {
@@ -108,6 +110,12 @@
 
   .dropdown-menu ul li {
     padding-bottom: 1em;
+  }
+
+  .mobile-nav-links .cancel-menu {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
   }
 
   footer button {
