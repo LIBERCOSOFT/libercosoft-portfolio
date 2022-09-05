@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Mobile */
 @media screen and (max-width: 768px) {
   .wrapper {
