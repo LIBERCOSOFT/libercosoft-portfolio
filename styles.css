@@ -87,12 +87,9 @@ html {
     background-size: contain;
   }
 
-  .visibility {
-    display: none;
-  }
-
+  .visibility,
   .pauseName {
-    opacity: 0;
+    display: none;
   }
 
   .dropdown-menu ul {
@@ -106,10 +103,12 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 65%;
+    width: 60%;
     background: url('assets/img/pop-image-dots.svg') bottom left no-repeat,
       url('assets/img/pop-image-dots.svg') top right no-repeat;
     margin: 2em auto;
+    position: relative;
+    top: 6%;
   }
 
   .dropdown-menu ul li {
