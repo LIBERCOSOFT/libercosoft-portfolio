@@ -69,6 +69,7 @@ html {
 
   .modal {
     padding: 0 1em;
+    background-color: #fff;
   }
 
   .modal .cancel {
@@ -317,6 +318,7 @@ html {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
+    padding: 1em 0;
   }
 
   .modal .modal-footer {
