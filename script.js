@@ -4,6 +4,9 @@ const nameTag = document.querySelector('#cancel-name-animation');
 const dropdown = document.querySelector('#dropdown-menu');
 const cancel = document.querySelector('#cancel');
 const modal = document.querySelector('#modal');
+const cardContainer = document.getElementById('card-container');
+const desktopCard1 = document.querySelector('#first-desktop-card');
+const desktopCard2 = document.querySelector('#second-desktop-card');
 
 hamburger.addEventListener('click', () => {
   dropdown.classList.toggle('visibility');
@@ -68,8 +71,6 @@ const projectData = [
   },
 ];
 
-const cardContainer = document.getElementById('card-container');
-
 const toggleModal = () => {
   modal.classList.remove('visibility');
 };
@@ -106,3 +107,62 @@ projectData.forEach((project) => {
 cancel.addEventListener('click', () => {
   modal.classList.add('visibility');
 });
+
+const desktopData = [
+  {
+    name: 'Project 1',
+    description: 'Project 1 Description',
+    featuredImage: 'assets/img/card-1.svg',
+    technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
+    liveLink: 'https://coming.soon',
+    sourceLink: 'https://developing.stage',
+  },
+  {
+    name: 'Project 2',
+    description: 'Project 2 Description',
+    featuredImage: 'assets/img/card-2.svg',
+    technologies: ['HTML/CSS', 'Ruby on Rails', '+1'],
+    liveLink: 'https://coming.soon',
+    sourceLink: 'https://developing.stage',
+  },
+];
+
+const card1 = document.createElement('div');
+card1.className = 'card-description';
+const projectName1 = document.createElement('p');
+projectName1.innerText = `${desktopData[0].name}`;
+const ul1 = document.createElement('ul');
+for (let i = 0; i < 3; i += 1) {
+  const li = document.createElement('li');
+  li.innerText = `${desktopData[0].technologies[i]}`;
+  ul1.appendChild(li);
+}
+const button1 = document.createElement('button');
+button1.type = 'button';
+button1.className = 'desktop-see-project';
+button1.innerHTML = 'See this project';
+button1.addEventListener('click', toggleModal);
+card1.appendChild(projectName1);
+card1.appendChild(ul1);
+card1.appendChild(button1);
+desktopCard1.prepend(card1);
+
+const card = document.createElement('div');
+card.className = 'desktop-description';
+const projectName = document.createElement('p');
+projectName.innerText = `${desktopData[1].name}`;
+const ul = document.createElement('ul');
+for (let i = 0; i < 3; i += 1) {
+  const li = document.createElement('li');
+  li.innerText = `${desktopData[1].technologies[i]}`;
+  ul.appendChild(li);
+}
+const button = document.createElement('button');
+button.type = 'button';
+button.className = 'desktop-see-project';
+button.innerHTML = 'See this project';
+button.addEventListener('click', toggleModal);
+card.appendChild(projectName);
+card.appendChild(ul);
+card.appendChild(button);
+desktopCard2.prepend(card);

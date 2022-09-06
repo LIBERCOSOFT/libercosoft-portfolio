@@ -604,8 +604,20 @@ html {
   }
 
   .modal {
-    border: 5em solid #1a2236;
+    border: 2em solid #1a2236;
     padding: 2em;
+    background-color: #fff;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+  }
+
+  .visibility {
+    display: none;
   }
 
   .modal h2 {
