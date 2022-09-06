@@ -70,6 +70,13 @@ html {
   .modal {
     padding: 0 1em;
     background-color: #fff;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
   }
 
   .modal .cancel {

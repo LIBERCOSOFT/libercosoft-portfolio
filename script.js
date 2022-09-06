@@ -2,6 +2,8 @@ const hamburger = document.querySelector('#hamburger-icon');
 const cancelMenu = document.querySelectorAll('.cancel-menu');
 const nameTag = document.querySelector('#cancel-name-animation');
 const dropdown = document.querySelector('#dropdown-menu');
+const cancel = document.querySelector('#cancel');
+const modal = document.querySelector('#modal');
 
 hamburger.addEventListener('click', () => {
   dropdown.classList.toggle('visibility');
@@ -68,26 +70,39 @@ const projectData = [
 
 const cardContainer = document.getElementById('card-container');
 
+const toggleModal = () => {
+  modal.classList.remove('visibility');
+};
+
 projectData.forEach((project) => {
   const card = document.createElement('div');
   card.className = 'card';
-  card.innerHTML = ` 
-  <img src="${project.featuredImage}" alt="${project.name} screenshot" />
-  <div class="card-description">
-    <p>${project.name}</p>
-      <ul>
-        <li>${project.technologies[0]}</li>
-        <li>${project.technologies[1]}</li>
-        <li>${project.technologies[2]}</li>
-      </ul>
-      <button type="button">
-        See this project
-        <img
-          src="assets/img/ic_arrow_right.svg"
-          alt="right arrow icon"
-        />
-      </button>
-  </div>`;
-
+  const image = document.createElement('img');
+  image.setAttribute('src', `${project.featuredImage}`);
+  image.setAttribute('alt', `${project.name} screenshot`);
+  const description = document.createElement('div');
+  description.className = 'card-description';
+  card.appendChild(image);
+  card.appendChild(description);
+  const name = document.createElement('p');
+  name.innerText = `${project.name}`;
+  const ul = document.createElement('ul');
+  for (let i = 0; i < 3; i += 1) {
+    const li = document.createElement('li');
+    li.innerText = `${project.technologies[i]}`;
+    ul.appendChild(li);
+  }
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'see-project';
+  button.innerHTML = 'See this project';
+  button.addEventListener('click', toggleModal);
+  description.appendChild(name);
+  description.appendChild(ul);
+  description.appendChild(button);
   cardContainer.appendChild(card);
+});
+
+cancel.addEventListener('click', () => {
+  modal.classList.add('visibility');
 });
