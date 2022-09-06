@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css?family=Playfair+Display"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/97bb250fba.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -24,11 +28,33 @@
           <a href="#">
             <img src="assets/img/top-nav-geometry.svg" alt="geometry design" />
           </a>
-          <img
-            class="hamburger"
-            src="assets/img/ic_menu.svg"
-            alt="hamburger menu"
-          />
+          <div class="hamburger" id="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="dropdown-menu visibility" id="dropdown-menu">
+            <div class="pop-up-menu">
+              <img src="assets/img/pop-up-top-geo.svg" alt="geometry design" />
+              <div class="cancel cancel-menu">
+                <div class="cancel-bar-1"></div>
+                <div class="cancel-bar-2"></div>
+              </div>
+            </div>
+
+            <div class="mobile-nav-links">
+              <ul>
+                <li>
+                  <a href="#intro-headline" class="cancel-menu">Hello</a>
+                </li>
+                <li>
+                  <a href="#projects-section" class="cancel-menu">Portfolio</a>
+                </li>
+                <li><a href="#about-section" class="cancel-menu">About</a></li>
+                <li><a href="#contact-me" class="cancel-menu">Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </header>
       <header class="desktop-header">
@@ -40,9 +66,9 @@
         </nav>
       </header>
       <main>
-        <section class="introduction">
+        <section id="intro-headline" class="introduction">
           <header>
-            <h1>
+            <h1 id="cancel-name-animation">
               Kolapo Precious
               <br />
               Akinrinlola
@@ -91,7 +117,7 @@
             class="intro-geo"
           />
         </figure>
-        <section class="project">
+        <section id="projects-section" class="project">
           <header>
             <h2>Projects</h2>
           </header>
@@ -297,7 +323,7 @@
             </div>
           </div>
         </section>
-        <section class="about">
+        <section id="about-section" class="about">
           <div class="about-description">
             <header>
               <h2>About</h2>
@@ -354,7 +380,7 @@
             <div class="desktop-design"></div>
           </div>
         </section>
-        <section class="form">
+        <section id="contact-me" class="form">
           <header>
             <img src="assets/img/top-nav-geometry.svg" alt="geometry design" />
             <h2>Get Started</h2>
@@ -439,5 +465,6 @@
         </footer>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
