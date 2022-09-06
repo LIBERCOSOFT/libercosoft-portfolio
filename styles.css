@@ -23,10 +23,6 @@ html {
     justify-content: space-between;
   }
 
-  /* .top-nav .hamburger {
-    padding-right: 1em;
-  } */
-
   .top-nav .hamburger,
   .pop-up-menu .cancel {
     display: flex;
