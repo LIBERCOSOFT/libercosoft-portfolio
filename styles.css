@@ -312,6 +312,44 @@ html {
     margin-bottom: -10px;
   }
 
+  .modal p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .modal .modal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal .modal-footer a {
+    text-decoration: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    width: 80%;
+    text-align: center;
+    padding: 1em;
+    margin: 1em 0;
+  }
+
+  .modal .modal-footer a i {
+    float: right;
+  }
+
+  .modal .modal-footer a:hover {
+    background-color: #1a2236;
+    color: #fff;
+  }
+
   .card-container .card .card-description {
     background-color: #1a2236;
     padding: 1.5em;
