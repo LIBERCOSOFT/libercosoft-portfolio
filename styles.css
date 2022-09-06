@@ -68,7 +68,6 @@ html {
   }
 
   .modal {
-    border: 2px solid goldenrod;
     padding: 0 1em;
   }
 
@@ -572,6 +571,7 @@ html {
   .desktop-header,
   .introduction-desktop,
   .project-desktop,
+  .modal .desktop-nav,
   footer button #desktop-download-icon {
     display: none;
   }
@@ -666,6 +666,29 @@ html {
     margin-bottom: -10px;
   }
 
+  .modal p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a2236;
+    width: 50%;
+    margin: 3em auto;
+  }
+
+  .modal .modal-footer,
+  .modal .desktop-nav {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .modal .desktop-nav {
+    padding: 5em 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .desktop-header {
     padding: 2em 0;
     text-align: center;
@@ -710,8 +733,43 @@ html {
     padding-left: 2em;
   }
 
+  .modal .modal-footer a {
+    text-decoration: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    text-align: center;
+    padding: 1em;
+    margin: 1em 1em 0 0;
+  }
+
+  .modal .desktop-nav a {
+    text-decoration: none;
+  }
+
   .desktop-header nav a:first-child {
     border-bottom: 2px solid #1a2236;
+  }
+
+  .modal .modal-footer a i {
+    padding-left: 2em;
+  }
+
+  .modal .desktop-nav a .fa-arrow-left {
+    padding-right: 1em;
+  }
+
+  .modal .desktop-nav a .fa-arrow-right {
+    padding-left: 1em;
+  }
+
+  .modal .modal-footer a:hover {
+    background-color: #1a2236;
+    color: #fff;
   }
 
   .introduction-desktop {
