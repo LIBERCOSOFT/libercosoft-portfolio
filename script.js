@@ -100,7 +100,7 @@ const toggleModal = (e) => {
       const modalCarouselPre = document.querySelector('#carousel-previews');
       const modalDescription = document.querySelector('#modal-description');
       const modLive = document.querySelector('#modal-live');
-      const modalSource = document.querySelector('#modal-source');
+      const modSource = document.querySelector('#modal-source');
       modalHeader.innerHTML = `<h2>${val.name}</h2>`;
       modalCarousel.innerHTML = `<img src="${val.featuredImage}" alt="project screenshot" />`;
       modalCarouselPre.innerHTML = `<img src="${val.featuredImage}" alt="project screenshot" />
@@ -120,7 +120,7 @@ const toggleModal = (e) => {
             exercitation ullamco laboris nisi.
       </p>`;
       modLive.setAttribute('href', `${val.liveLink}`);
-      modalSource.setAttribute('href', `${val.sourceLink}`);
+      modSource.setAttribute('href', `${val.sourceLink}`);
     }
   });
 };
