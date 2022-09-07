@@ -206,14 +206,16 @@ desktopCard2.prepend(card2);
 form.addEventListener('submit', (event) => {
   const { value } = form.elements.email;
   event.preventDefault();
-  if (value.toLowerCase() === value) {
-    form.submit();
-  }
-  const error = document.querySelector('#error');
-  error.innerText = 'email should be in lowercase';
+  if (value.toLowerCase() !== value) {
+    const error = document.querySelector('#error');
+    error.innerText = 'email should be in lowercase';
 
-  const email = document.getElementById('email');
-  email.id = 'error-indicator';
+    const email = document.getElementById('email');
+    email.id = 'error-indicator';
+  }
+  else{
+  form.submit();
+  }
 });
 
 window.onload = () => {
