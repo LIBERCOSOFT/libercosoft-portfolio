@@ -212,9 +212,8 @@ form.addEventListener('submit', (event) => {
 
     const email = document.getElementById('email');
     email.id = 'error-indicator';
-  }
-  else{
-  form.submit();
+  } else {
+    form.submit();
   }
 });
 
