@@ -8,6 +8,8 @@ const cardContainer = document.getElementById('card-container');
 const desktopCard1 = document.querySelector('#first-desktop-card');
 const desktopCard2 = document.querySelector('#second-desktop-card');
 
+const form = document.getElementById('contact-form');
+
 const projectData = [
   {
     name: 'Project 1',
@@ -200,3 +202,11 @@ card2.appendChild(projectName2);
 card2.appendChild(ul2);
 card2.appendChild(button2);
 desktopCard2.prepend(card2);
+
+form.addEventListener('submit', (event) => {
+  const { value } = form.elements.email;
+  if (value.toLowerCase() === value) {
+    form.submit();
+  }
+  event.preventDefault();
+});
