@@ -53,6 +53,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-> #### Contributions: [Paul Kaizirege](https://github.com/kaizipaul) , [Natanim Abesha](https://github.com/NatanimA),[TechnoAndy](https://github.com/TechnoAndy)
+> #### Contributions: [Paul Kaizirege](https://github.com/kaizipaul), [Natanim Abesha](https://github.com/NatanimA), [TechnoAndy](https://github.com/TechnoAndy)
 
 - Microverse

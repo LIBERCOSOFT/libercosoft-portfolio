@@ -17,15 +17,15 @@ html {
     flex-direction: column;
   }
 
+  i {
+    padding-left: 1em;
+  }
+
   .top-nav,
   .pop-up-menu {
     display: flex;
     justify-content: space-between;
   }
-
-  /* .top-nav .hamburger {
-    padding-right: 1em;
-  } */
 
   .top-nav .hamburger,
   .pop-up-menu .cancel {
@@ -35,7 +35,8 @@ html {
   }
 
   .top-nav .hamburger div,
-  .pop-up-menu .cancel div {
+  .pop-up-menu .cancel div,
+  .modal .cancel div {
     width: 25px;
     height: 3px;
     background-color: #1a2236;
@@ -70,6 +71,47 @@ html {
     border: none;
   }
 
+  .modal {
+    padding: 0 1em;
+    background-color: #fff;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    animation: zoomin 1s linear 1;
+    animation-delay: 0.1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  .modal .cancel {
+    float: right;
+    margin: 1em 1em 0 0;
+  }
+
+  .modal h2 {
+    margin-top: 2em;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 80%;
+    color: #1a2236;
+  }
+
+  .modal .cancel .cancel-bar-1 {
+    transform: translateY(3px) rotate(-45deg);
+    border: none;
+  }
+
+  .modal .cancel .cancel-bar-2 {
+    transform: translateY(-1px) rotate(46deg);
+    border: none;
+  }
+
   .top-nav .dropdown-menu {
     position: fixed;
     background-color: #fff;
@@ -85,6 +127,17 @@ html {
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-size: contain;
+    animation: fadeIn 1.5s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   .visibility,
@@ -265,15 +318,57 @@ html {
     flex-direction: column;
   }
 
-  footer button img {
-    width: 2em;
-    height: 1em;
-    padding-left: 0.5em;
+  .modal .carousel-previews {
+    display: flex;
   }
 
+  .modal .carousel-previews img {
+    width: 25%;
+  }
+
+  .modal .carousel img,
   .card-container .card img {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: -10px;
+  }
+
+  .modal p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 1em 0;
+  }
+
+  .modal .modal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal .modal-footer a {
+    text-decoration: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    width: 80%;
+    text-align: center;
+    padding: 1em;
+    margin: 1em 0;
+  }
+
+  .modal .modal-footer a i {
+    float: right;
+  }
+
+  .modal .modal-footer a:hover {
+    background-color: #1a2236;
+    color: #fff;
   }
 
   .card-container .card .card-description {
@@ -311,6 +406,22 @@ html {
     font-size: 20px;
   }
 
+  .modal ul {
+    display: flex;
+    margin: 1.5em 0;
+  }
+
+  .modal ul li {
+    list-style: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10.3334px;
+    margin-right: 1em;
+    border: 0.516669px solid #1a2236;
+    padding: 6px 10px;
+  }
+
   .card .card-description ul {
     display: flex;
   }
@@ -328,18 +439,12 @@ html {
   .card .card-description ul li {
     list-style: none;
     background-color: #98dede;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 10.3334px;
     margin-right: 1em;
     padding: 1em;
-  }
-
-  .card .card-description button img {
-    width: 2em;
-    height: 1em;
-    padding-top: 5px;
   }
 
   .about {
@@ -352,12 +457,6 @@ html {
     font-weight: 400;
     font-size: 50px;
     margin: 1em 0 0.5em 0;
-  }
-
-  .about .get-cv button img {
-    width: 2em;
-    height: 1em;
-    padding-left: 0.5em;
   }
 
   .about h3 {
@@ -482,6 +581,7 @@ html {
   .desktop-header,
   .introduction-desktop,
   .project-desktop,
+  .modal .desktop-nav,
   footer button #desktop-download-icon {
     display: none;
   }
@@ -489,12 +589,6 @@ html {
 
 /* Desktop */
 @media screen and (min-width: 769px) {
-  footer button img {
-    width: 2em;
-    height: 1em;
-    padding-left: 0.5em;
-  }
-
   .mobile-header,
   .introduction,
   .project,
@@ -502,6 +596,128 @@ html {
   footer button #mobile-download-icon,
   main figure {
     display: none;
+  }
+
+  i {
+    padding-left: 1em;
+  }
+
+  .modal {
+    border: 2em solid #1a2236;
+    padding: 2em;
+    background-color: #fff;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    animation: fadeIn 1.5s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .visibility {
+    display: none;
+  }
+
+  .modal h2 {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 80%;
+  }
+
+  .modal .cancel div {
+    width: 25px;
+    height: 3px;
+    background-color: #1a2236;
+    padding: 2px 0;
+    border: 1px solid #fff;
+    border-radius: 20px;
+  }
+
+  .modal .cancel {
+    float: right;
+    margin: 1em 1em 0 0;
+  }
+
+  .modal .cancel .cancel-bar-1 {
+    transform: translateY(3px) rotate(-45deg);
+    border: none;
+  }
+
+  .modal .cancel .cancel-bar-2 {
+    transform: translateY(-1px) rotate(46deg);
+    border: none;
+  }
+
+  .modal ul {
+    display: flex;
+    margin: 1.5em 0;
+  }
+
+  .modal ul li {
+    list-style: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10.3334px;
+    margin-right: 1em;
+    border: 0.516669px solid #1a2236;
+    padding: 6px 10px;
+    width: 129px;
+    text-align: center;
+  }
+
+  .modal .carousel-previews {
+    display: flex;
+  }
+
+  footer .socials a img {
+    transition: transform 1s;
+  }
+
+  .modal .carousel-previews img {
+    width: 25%;
+  }
+
+  .modal .carousel img {
+    width: 100%;
+    margin-bottom: -10px;
+  }
+
+  .modal p {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a2236;
+    width: 50%;
+    margin: 3em auto;
+  }
+
+  .modal .modal-footer,
+  .modal .desktop-nav {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .modal .desktop-nav {
+    padding: 5em 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   .desktop-header {
@@ -548,8 +764,43 @@ html {
     padding-left: 2em;
   }
 
+  .modal .modal-footer a {
+    text-decoration: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a2236;
+    border: 1px solid #1a2236;
+    text-align: center;
+    padding: 1em;
+    margin: 1em 1em 0 0;
+  }
+
+  .modal .desktop-nav a {
+    text-decoration: none;
+  }
+
   .desktop-header nav a:first-child {
     border-bottom: 2px solid #1a2236;
+  }
+
+  .modal .modal-footer a i {
+    padding-left: 2em;
+  }
+
+  .modal .desktop-nav a .fa-arrow-left {
+    padding-right: 1em;
+  }
+
+  .modal .desktop-nav a .fa-arrow-right {
+    padding-left: 1em;
+  }
+
+  .modal .modal-footer a:hover {
+    background-color: #1a2236;
+    color: #fff;
   }
 
   .introduction-desktop {
@@ -676,10 +927,6 @@ html {
     border: 1px solid #1a2236;
   }
 
-  footer .socials a img {
-    transition: transform 1s;
-  }
-
   .introduction-texts .collaboration button:focus,
   .about-description .get-cv button:focus,
   .form .contact-collaboration button:focus {
@@ -784,10 +1031,6 @@ html {
     border: 2px solid #fff;
   }
 
-  .card .card-description button img {
-    width: 1em;
-  }
-
   .project-desktop .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -858,10 +1101,6 @@ html {
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
-  }
-
-  .desktop-card .desktop-card-description button img {
-    width: 1em;
   }
 
   .grid-container #large-image {
