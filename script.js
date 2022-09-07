@@ -205,8 +205,8 @@ desktopCard2.prepend(card2);
 
 form.addEventListener('submit', (event) => {
   const { value } = form.elements.email;
-  event.preventDefault();
   if (value.toLowerCase() !== value) {
+    event.preventDefault();
     const error = document.querySelector('#error');
     error.innerText = 'email should be in lowercase';
 
