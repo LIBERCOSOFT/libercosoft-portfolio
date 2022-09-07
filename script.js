@@ -209,4 +209,18 @@ form.addEventListener('submit', (event) => {
     form.submit();
   }
   event.preventDefault();
+  const error = document.querySelector('#error');
+  error.innerText = 'email should be in lowercase';
+
+  const email = document.getElementById('email');
+  email.id = 'error-indicator';
 });
+
+window.onload = () => {
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+  name.value = '';
+  email.value = '';
+  message.value = '';
+};
