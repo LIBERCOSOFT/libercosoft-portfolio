@@ -9,6 +9,9 @@ const desktopCard1 = document.querySelector('#first-desktop-card');
 const desktopCard2 = document.querySelector('#second-desktop-card');
 
 const form = document.getElementById('contact-form');
+const contactName = document.getElementById('name');
+const contactEmail = document.getElementById('email');
+const contactMessage = document.getElementById('message');
 
 const projectData = [
   {
@@ -79,6 +82,12 @@ const desktopData = [
     sourceLink: 'https://developing.stage',
   },
 ];
+
+const contactData = {
+  name: '',
+  email: '',
+  message: '',
+};
 
 hamburger.addEventListener('click', () => {
   dropdown.classList.toggle('visibility');
@@ -213,15 +222,67 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById('email');
     email.id = 'error-indicator';
   } else {
+    localStorage.removeItem('contactData');
     form.submit();
   }
 });
 
+function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    const { code, name } = e;
+    return (
+      e instanceof DOMException
+        && (code === 22
+          || code === 1014
+          || name === 'QuotaExceededError'
+          || name === 'NS_ERROR_DOM_QUOTA_REACHED')
+        && storage.length !== 0
+    );
+  }
+}
+
+const storageChecker = storageAvailable('localStorage');
+
+contactName.addEventListener('change', () => {
+  if (storageChecker) {
+    const { value } = contactName;
+    contactData.name = value;
+    const stringify = JSON.stringify(contactData);
+    localStorage.setItem('contactData', stringify);
+  }
+});
+
+contactEmail.addEventListener('change', () => {
+  if (storageChecker) {
+    const { value } = contactEmail;
+    contactData.email = value;
+    const stringify = JSON.stringify(contactData);
+    localStorage.setItem('contactData', stringify);
+  }
+});
+
+contactMessage.addEventListener('change', () => {
+  if (storageChecker) {
+    const { value } = contactMessage;
+    contactData.message = value;
+    const stringify = JSON.stringify(contactData);
+    localStorage.setItem('contactData', stringify);
+  }
+});
+
 window.onload = () => {
-  const name = document.getElementById('name');
-  const email = document.getElementById('email');
-  const message = document.getElementById('message');
-  name.value = '';
-  email.value = '';
-  message.value = '';
+  if (localStorage.getItem('contactData')) {
+    const contactData = localStorage.getItem('contactData');
+    const parsed = JSON.parse(contactData);
+    contactName.value = parsed.name;
+    contactEmail.value = parsed.email;
+    contactMessage.value = parsed.message;
+  }
 };

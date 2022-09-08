@@ -1,6 +1,8 @@
 # LIBERCOSOFT PORTFOLIO
 
-> A portfolio showing the web development portfoilio of Kolapo Precious Akinrinlola
+> A portfolio showing the web development portfoilio of Kolapo Precious Akinrinlola.
+> If you like it please give it a Star.⭐️:wink:, also you can follow
+> ![](assets/img/project-screenshot.png)
 
 ## Built With
 
