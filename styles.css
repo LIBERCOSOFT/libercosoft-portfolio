@@ -537,6 +537,15 @@ html {
     border: 2px solid #1a2236;
   }
 
+  #error {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #f00;
+    float: right;
+  }
+
   .form fieldset label {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -1268,6 +1277,19 @@ html {
 
   .form fieldset input:focus {
     border: 1px solid #1a2236;
+  }
+
+  #error {
+    margin: 1em;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #f00;
+  }
+
+  #error-indicator {
+    border: 1px solid #f00;
   }
 
   .form fieldset label {

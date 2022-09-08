@@ -8,6 +8,8 @@ const cardContainer = document.getElementById('card-container');
 const desktopCard1 = document.querySelector('#first-desktop-card');
 const desktopCard2 = document.querySelector('#second-desktop-card');
 
+const form = document.getElementById('contact-form');
+
 const projectData = [
   {
     name: 'Project 1',
@@ -200,3 +202,26 @@ card2.appendChild(projectName2);
 card2.appendChild(ul2);
 card2.appendChild(button2);
 desktopCard2.prepend(card2);
+
+form.addEventListener('submit', (event) => {
+  const { value } = form.elements.email;
+  if (value.toLowerCase() !== value) {
+    event.preventDefault();
+    const error = document.querySelector('#error');
+    error.innerText = 'email should be in lowercase';
+
+    const email = document.getElementById('email');
+    email.id = 'error-indicator';
+  } else {
+    form.submit();
+  }
+});
+
+window.onload = () => {
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+  name.value = '';
+  email.value = '';
+  message.value = '';
+};
