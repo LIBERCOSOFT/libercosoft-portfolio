@@ -1242,11 +1242,19 @@ html {
     padding-left: 0.5em;
   }
 
-  .form {
-    background-image: url('assets/img/desktop-form-geo.svg');
+  /* #contact-me {
+    background-image: url('assets/img/contact-footer-geometry.svg');
     background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: top;
+    background-position-x: right;
+    background-position-y: bottom;
+  } */
+
+  .form {
+    background-image: url('assets/img/desktop-form-geo.svg'),
+      url('assets/img/contact-footer-geometry.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: left, right;
+    background-position-y: top, bottom;
     padding: 10em 20em;
   }
 
