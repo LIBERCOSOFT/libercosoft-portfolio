@@ -1242,13 +1242,6 @@ html {
     padding-left: 0.5em;
   }
 
-  /* #contact-me {
-    background-image: url('assets/img/contact-footer-geometry.svg');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
-  } */
-
   .form {
     background-image: url('assets/img/desktop-form-geo.svg'),
       url('assets/img/contact-footer-geometry.svg');
