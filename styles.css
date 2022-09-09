@@ -81,7 +81,7 @@ html {
     left: 0;
     top: 0;
     overflow: auto;
-    animation: zoomin 1s linear 1;
+    animation: zoomin 0.5s linear 1;
     animation-delay: 0.1s;
     visibility: hidden;
     animation-fill-mode: forwards;
