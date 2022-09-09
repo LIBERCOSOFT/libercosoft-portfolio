@@ -159,7 +159,7 @@ projectData.forEach((project) => {
   button.className = 'see-project';
   button.id = `${project.name}`;
   button.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
-  button.addEventListener('click', toggleModal());
+  button.addEventListener('click', toggleModal);
   description.appendChild(name);
   description.appendChild(ul);
   description.appendChild(button);
@@ -251,7 +251,7 @@ function storageAvailable(type) {
 const storageChecker = storageAvailable('localStorage');
 
 contactName.addEventListener('change', () => {
-  if ('storageChecker') {
+  if (storageChecker) {
     const { value } = contactName;
     contactData.name = value;
     const stringify = JSON.stringify(contactData);
@@ -277,7 +277,7 @@ contactMessage.addEventListener('change', () => {
   }
 });
 
-window.load = () => {
+window.onload = () => {
   if (localStorage.getItem('contactData')) {
     const contactData = localStorage.getItem('contactData');
     const parsed = JSON.parse(contactData);
