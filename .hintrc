@@ -15,12 +15,12 @@
   "formatters": [
     "stylish"
   ],
-  "hints": {
-    "html-checker": "off"
-  },
-  "browserslist": [
-    "defaults",
-    "not ie 11",
-    "not ios_saf <= 14.8"
+  "hints": [
+    "button-type",
+    "disown-opener",
+    "html-checker:off",
+    "meta-charset-utf-8",
+    "meta-viewport",
+    "no-inline-styles:error"
   ]
 }
