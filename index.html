@@ -64,8 +64,8 @@
       </div>
       <div class="desktop-header">
         <nav>
-          <a href="#intro-headline">Hello</a>
-          <a href="#projects-section">Portfolio</a>
+          <a href="#introduction-desktop">Hello</a>
+          <a href="#projects-desktop-section">Portfolio</a>
           <a href="#about-section">About</a>
           <a href="#contact-me">Contact</a>
         </nav>
@@ -89,7 +89,7 @@
             <button type="button">Start collaboration</button>
           </div>
         </section>
-        <section class="introduction-desktop">
+        <section class="introduction-desktop" id="introduction-desktop">
           <div class="introduction-texts">
             <header>
               <h1>
@@ -105,7 +105,7 @@
               me.
             </p>
             <div class="collaboration">
-              <button type="button">Start collaboration</button>
+              <a href="#contact-me">Start collaboration</a>
             </div>
           </div>
           <div class="hero-geometry">
@@ -136,19 +136,15 @@
           <header>
             <h2 id="modal-header"></h2>
           </header>
-          <ul class="modal-ul">
-            <li>HTML/CSS</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-          </ul>
+          <ul id="modal-tech"></ul>
           <div class="carousel" id="modal-carousel"></div>
           <div class="carousel-previews" id="carousel-previews"></div>
           <div id="modal-description"></div>
           <div class="modal-footer">
-            <a href="#" id="modal-live"
+            <a id="modal-live" target="_blank"
               >See live <i class="fa-solid fa-arrow-up-right-from-square"></i
             ></a>
-            <a id="modal-source" href="#"
+            <a id="modal-source" target="_blank"
               >See source <i class="fa-brands fa-github"></i
             ></a>
           </div>
@@ -159,7 +155,8 @@
             <a href="#">Next project <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </section>
-        <section class="project-desktop" id="projects-section">
+        <div id="projects-desktop-section"></div>
+        <section class="project-desktop">
           <div class="flex-wrapper">
             <header>
               <h2>Projects</h2>
@@ -206,7 +203,7 @@
             <div class="desktop-card">
               <div class="desktop-card-description" id="second-desktop-card">
                 <img
-                  src="assets/img/laptop-2.svg"
+                  src="assets/img/desktop-project-2/featured.png"
                   id="laptop-2"
                   alt="laptop photo"
                 />
@@ -225,10 +222,20 @@
               <h2>About</h2>
             </header>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ea eiusmod
+              As a remote full-stack developer for over three years, I
+              collaborated every day with other developers around the world
+              while implementing proper remote work etiquette, workstation
+              behavior, positive feedback response, and proper time-based
+              schedule among the technical skills. In my previous work
+              experience as a MERN stack developer, I was given little to less
+              supervision on my work which was mostly reviewed by the senior
+              developer I was under then, and most of my codes and work ethics
+              were appreciated by the members of my team. Being opportune to
+              study psychology which is very useful in my interactions has
+              helped me to see each person as a different individual who has
+              something new or fun I could learn from. This prompts me to
+              understand people more. I'm also accountable and prioritize tasks
+              according to their importance.
             </p>
             <div class="get-cv">
               <button type="button">
@@ -281,8 +288,8 @@
             <img src="assets/img/top-nav-geometry.svg" alt="geometry design" />
             <h2>Get Started</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
+              I'm always elated to hear about new projects, opportunities, or
+              ideas, so if you'd like to chat please get in touch.
             </p>
           </header>
           <form
