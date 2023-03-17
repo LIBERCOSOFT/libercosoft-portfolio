@@ -618,7 +618,7 @@ html {
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     top: 0;
     overflow: auto;
@@ -730,11 +730,16 @@ html {
   }
 
   .desktop-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #fff;
     padding: 2em 0;
     text-align: center;
     display: flex;
     justify-content: center;
     box-shadow: 0 0.5px 0 #dddfe6;
+    z-index: 1;
   }
 
   .desktop-header nav {
@@ -791,6 +796,24 @@ html {
     text-decoration: none;
   }
 
+  .introduction-texts .collaboration {
+    margin-top: 4em;
+  }
+
+  .introduction-texts .collaboration a {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    background-color: #1a2236;
+    border: 1px solid #1a2236;
+    color: #fff;
+    padding: 1em 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
   .desktop-header nav a:first-child {
     border-bottom: 2px solid #1a2236;
   }
@@ -834,7 +857,6 @@ html {
     font-weight: 400;
     font-size: 110px;
     line-height: 100%;
-    padding-top: 1em;
     animation: zoomin 1s linear 1;
     animation-delay: 2s;
     visibility: hidden;
@@ -872,19 +894,6 @@ html {
     font-size: 18px;
     line-height: 27px;
     color: #fff;
-  }
-
-  .introduction-texts .collaboration button {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    background-color: #1a2236;
-    border: 1px solid #1a2236;
-    color: #fff;
-    padding: 1em 1.2em;
-    margin-top: 4em;
   }
 
   .card .card-description button {
@@ -928,7 +937,7 @@ html {
     padding: 1em;
   }
 
-  .introduction-texts .collaboration button:hover,
+  .introduction-texts .collaboration a:hover,
   .about-description .get-cv button:hover,
   .form .contact-collaboration button:hover {
     background-color: #fff;
@@ -936,7 +945,7 @@ html {
     border: 1px solid #1a2236;
   }
 
-  .introduction-texts .collaboration button:focus,
+  .introduction-texts .collaboration a:focus,
   .about-description .get-cv button:focus,
   .form .contact-collaboration button:focus {
     background-color: #fff;
@@ -952,9 +961,12 @@ html {
     width: 100%;
   }
 
+  #projects-desktop-section {
+    height: 10em;
+  }
+
   .project-desktop .flex-wrapper {
     display: flex;
-    margin-top: 10em;
   }
 
   .project-desktop header {
@@ -978,7 +990,7 @@ html {
   }
 
   .project-desktop .card {
-    background-image: url('assets/img/card-1.svg');
+    background-image: url('assets/img/desktop-project-1/featured.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;

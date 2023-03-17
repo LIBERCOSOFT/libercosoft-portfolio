@@ -15,12 +15,17 @@ const contactMessage = document.getElementById('message');
 
 const projectData = [
   {
-    name: 'Project 1',
-    description: 'Project 1 Description',
-    featuredImage: 'assets/img/card-1.svg',
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
-    liveLink: 'https://coming.soon',
-    sourceLink: 'https://developing.stage',
+    id: '1',
+    name: 'Bridal Cars Reservation',
+    description: 'Bridal cars is a full stack application that allows users to reserve a bridal car. It uses React in the front end and RoR(Ruby on Rails) as an API. Using this app, users can log in by typing username and password. Once logged in, they are able to see all the available cars, the car details and can reserve a car.',
+    featuredImage: 'assets/img/desktop-project-1/featured.png',
+    preview1: 'assets/img/desktop-project-1/preview-1.png',
+    preview2: 'assets/img/desktop-project-1/preview-2.png',
+    preview3: 'assets/img/desktop-project-1/preview-3.png',
+    preview4: 'assets/img/desktop-project-1/preview-4.png',
+    technologies: ['ReactJS', 'Ruby on Rails', 'Postgres'],
+    liveLink: 'https://deploy-preview-18--storied-madeleine-8f057b.netlify.app/',
+    sourceLink: 'https://github.com/inspecta/bridal-cars-frontend',
   },
   {
     name: 'Project 2',
@@ -47,12 +52,17 @@ const projectData = [
     sourceLink: 'https://developing.stage',
   },
   {
-    name: 'Project 5',
-    description: 'Project 5 Description',
-    featuredImage: 'assets/img/card-5.svg',
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
-    liveLink: 'https://coming.soon',
-    sourceLink: 'https://developing.stage',
+    id: '5',
+    name: 'Budget App',
+    description: 'A Ruby on Rails application that allows users to register and log in, introduce new transactions associated with a category, and see the money spent on each category.',
+    featuredImage: 'assets/img/desktop-project-2/featured.png',
+    preview1: 'assets/img/desktop-project-2/preview1.png',
+    preview2: 'assets/img/desktop-project-2/preview2.png',
+    preview3: 'assets/img/desktop-project-2/preview3.png',
+    preview4: 'assets/img/desktop-project-2/preview4.png',
+    technologies: ['HTML/CSS', 'Ruby on Rails', 'Postgres'],
+    liveLink: 'https://budget-app-9ny9.onrender.com/',
+    sourceLink: 'https://github.com/LIBERCOSOFT/budget-app',
   },
   {
     name: 'Project 6',
@@ -66,20 +76,15 @@ const projectData = [
 
 const desktopData = [
   {
-    name: 'Project 1',
-    description: 'Project 1 Description',
-    featuredImage: 'assets/img/card-1.svg',
-    technologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
-    liveLink: 'https://coming.soon',
-    sourceLink: 'https://developing.stage',
+    id: 1,
+    name: 'Bridal Cars Reservation',
+    technologies: ['ReactJS', 'Ruby on Rails', 'Postgres'],
   },
+
   {
-    name: 'Project 2',
-    description: 'Project 2 Description',
-    featuredImage: 'assets/img/card-2.svg',
+    id: 5,
+    name: 'Budget',
     technologies: ['HTML/CSS', 'Ruby on Rails', '+1'],
-    liveLink: 'https://coming.soon',
-    sourceLink: 'https://developing.stage',
   },
 ];
 
@@ -104,34 +109,30 @@ for (let i = 0; i < cancelMenu.length; i += 1) {
 const toggleModal = (e) => {
   modal.classList.remove('visibility');
   const { id } = e.target;
-  projectData.forEach((val) => {
-    if (val.name === id) {
+  projectData.forEach((project) => {
+    if (project.id === id) {
       const modalHeader = document.querySelector('#modal-header');
+      const modalTech = document.querySelector('#modal-tech');
       const modalCarousel = document.querySelector('#modal-carousel');
       const modalCarouselPre = document.querySelector('#carousel-previews');
       const modalDescription = document.querySelector('#modal-description');
       const modLive = document.querySelector('#modal-live');
       const modSource = document.querySelector('#modal-source');
-      modalHeader.innerHTML = `<h2>${val.name}</h2>`;
-      modalCarousel.innerHTML = `<img src="${val.featuredImage}" alt="project screenshot" />`;
-      modalCarouselPre.innerHTML = `<img src="${val.featuredImage}" alt="project screenshot" />
-      <img src="${val.featuredImage}" alt="project screenshot" />
-      <img src="${val.featuredImage}" alt="project screenshot" />
-      <img src="${val.featuredImage}" alt="project screenshot" />`;
+      modalHeader.innerHTML = `<h2>${project.name}</h2>`;
+      modalTech.innerHTML = `
+        <li>${project.technologies[0]}</li>
+        <li>${project.technologies[1]}</li>
+        <li>${project.technologies[2]}</li>`;
+      modalCarousel.innerHTML = `<img src="${project.featuredImage}" alt="project screenshot" />`;
+      modalCarouselPre.innerHTML = `<img src="${project.preview1}" alt="project screenshot" />
+      <img src="${project.preview2}" alt="project screenshot" />
+      <img src="${project.preview3}" alt="project screenshot" />
+      <img src="${project.preview4}" alt="project screenshot" />`;
       modalDescription.innerHTML = `<p class="project-description" id="modal-description">
-            ${val.description}<br />
-            This is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            <br />
-            <br />
-            Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi.
+            ${project.description}
       </p>`;
-      modLive.setAttribute('href', `${val.liveLink}`);
-      modSource.setAttribute('href', `${val.sourceLink}`);
+      modLive.setAttribute('href', `${project.liveLink}`);
+      modSource.setAttribute('href', `${project.sourceLink}`);
     }
   });
 };
@@ -157,7 +158,7 @@ projectData.forEach((project) => {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'see-project';
-  button.id = `${project.name}`;
+  button.id = `${project.id}`;
   button.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
   button.addEventListener('click', toggleModal);
   description.appendChild(name);
@@ -182,7 +183,7 @@ for (let i = 0; i < 3; i += 1) {
 }
 const button1 = document.createElement('button');
 button1.type = 'button';
-button1.id = `${desktopData[0].name}`;
+button1.id = `${desktopData[0].id}`;
 button1.className = 'desktop-see-project';
 button1.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
 button1.addEventListener('click', toggleModal);
@@ -203,7 +204,7 @@ for (let i = 0; i < 3; i += 1) {
 }
 const button2 = document.createElement('button');
 button2.type = 'button';
-button2.id = `${desktopData[1].name}`;
+button2.id = `${desktopData[1].id}`;
 button2.className = 'desktop-see-project';
 button2.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
 button2.addEventListener('click', toggleModal);

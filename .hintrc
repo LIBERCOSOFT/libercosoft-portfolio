@@ -2,9 +2,14 @@
   "extends": [
     "development"
   ],
-  "browserslist": [
-    "defaults",
-    "not ie 11",
-    "not ios_saf <= 14.8"
-  ]
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "scroll-behavior"
+        ]
+      }
+    ]
+  }
 }
