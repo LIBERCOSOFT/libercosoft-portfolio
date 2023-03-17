@@ -15,14 +15,9 @@
   "formatters": [
     "stylish"
   ],
-  "hints": [
-    "button-type",
-    "disown-opener",
-    // "html-checker",
-    "meta-charset-utf-8",
-    "meta-viewport",
-    "no-inline-styles:error"
-  ],
+  "hints": {
+    "html-checker": "off"
+  },
   "browserslist": [
     "defaults",
     "not ie 11",
