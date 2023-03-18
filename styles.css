@@ -10,6 +10,27 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+:root {
+  --shadow: #1a2236;
+  --scrollbarBG: #eee;
+  --thumbBG: #fdc157;
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  box-shadow: 0 -100vh 0 100vh var(--shadow), 0 0 15px 5px black;
+}
+
 /* Mobile */
 @media screen and (max-width: 768px) {
   .wrapper {
@@ -35,8 +56,7 @@ html {
   }
 
   .top-nav .hamburger div,
-  .pop-up-menu .cancel div,
-  .modal .cancel div {
+  .pop-up-menu .cancel div{
     width: 25px;
     height: 3px;
     background-color: #1a2236;
@@ -92,6 +112,10 @@ html {
     margin: 1em 1em 0 0;
   }
 
+  .modal .cancel i {
+    font-size: xx-large;
+  }
+
   .modal h2 {
     margin-top: 2em;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -100,16 +124,6 @@ html {
     font-size: 20px;
     line-height: 80%;
     color: #1a2236;
-  }
-
-  .modal .cancel .cancel-bar-1 {
-    transform: translateY(3px) rotate(-45deg);
-    border: none;
-  }
-
-  .modal .cancel .cancel-bar-2 {
-    transform: translateY(-1px) rotate(46deg);
-    border: none;
   }
 
   .top-nav .dropdown-menu {
@@ -174,7 +188,7 @@ html {
     cursor: pointer;
   }
 
-  footer button {
+  footer a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -183,7 +197,6 @@ html {
     color: #92dcdc;
     background-color: inherit;
     border: none;
-    margin-bottom: 1em;
   }
 
   .dropdown-menu button {
@@ -243,8 +256,8 @@ html {
     width: 60%;
   }
 
-  .introduction .collaboration button,
-  .about .get-cv button,
+  .introduction .collaboration a,
+  .about .get-cv a,
   .form form .contact-collaboration button {
     width: 100%;
     height: 50px;
@@ -255,7 +268,14 @@ html {
     line-height: 24px;
     background-color: #1a2236;
     color: #fff;
+    padding: 0.7em;
   }
+
+  .about .get-cv {
+    margin: 2em;
+    text-align: center;
+  }
+
 
   .card .card-description button:hover {
     background-color: #fff;
@@ -269,15 +289,15 @@ html {
     border: 2px solid #1a2236;
   }
 
-  .introduction .collaboration button:focus,
-  .about .get-cv button:focus {
+  .introduction .collaboration a:focus,
+  .about .get-cv a:focus {
     background-color: #fff;
     color: #1a2236;
     border: 2px solid #1a2236;
   }
 
-  .introduction .collaboration button:hover,
-  .about .get-cv button:hover,
+  .introduction .collaboration a:hover,
+  .about .get-cv a:hover,
   .form form .contact-collaboration button:hover {
     background-color: #fff;
     color: #1a2236;
@@ -291,7 +311,6 @@ html {
   }
 
   .introduction .collaboration,
-  .about .get-cv,
   .form form .contact-collaboration {
     text-align: center;
   }
@@ -469,41 +488,38 @@ html {
 
   .about .languages {
     background-color: #1c528a;
-    height: 18em;
+    height: 21em;
     background-image: url('assets/img/ic_languages_mob.svg');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
     color: #fff;
-    padding: 3em;
-    margin-top: 3em;
+    padding: 0.5em 3em;
   }
 
   .about .frameworks {
     background-color: #e2505c;
-    height: 18em;
+    height: 21em;
     background-image: url('assets/img/ic_framework.svg');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
     color: #fff;
-    padding: 3em;
-    margin-top: 1em;
+    padding: 0.5em 3em;
   }
 
   .about .skills {
     background-color: #febf52;
-    height: 18em;
+    height: 21em;
     background-image: url('assets/img/ic_skills.svg');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
     color: #fff;
-    padding: 3em;
-    margin-top: 1em;
+    padding: 0.5em 3em;
   }
 
   .form {
@@ -585,13 +601,13 @@ html {
   footer .socials {
     display: flex;
     justify-content: space-between;
+    margin-top: 1em;
   }
 
   .desktop-header,
   .introduction-desktop,
   .project-desktop,
-  .modal .desktop-nav,
-  footer button #desktop-download-icon {
+  footer a #desktop-download-icon {
     display: none;
   }
 }
@@ -602,7 +618,7 @@ html {
   .introduction,
   .project,
   .form header img,
-  footer button #mobile-download-icon,
+  footer a #mobile-download-icon,
   main figure {
     display: none;
   }
@@ -661,14 +677,8 @@ html {
     margin: 1em 1em 0 0;
   }
 
-  .modal .cancel .cancel-bar-1 {
-    transform: translateY(3px) rotate(-45deg);
-    border: none;
-  }
-
-  .modal .cancel .cancel-bar-2 {
-    transform: translateY(-1px) rotate(46deg);
-    border: none;
+  .modal .cancel i {
+    font-size: xx-large;
   }
 
   .modal ul {
@@ -717,16 +727,9 @@ html {
     margin: 3em auto;
   }
 
-  .modal .modal-footer,
-  .modal .desktop-nav {
+  .modal .modal-footer {
     width: 50%;
     margin: 0 auto;
-  }
-
-  .modal .desktop-nav {
-    padding: 5em 0;
-    display: flex;
-    justify-content: space-between;
   }
 
   .desktop-header {
@@ -792,10 +795,6 @@ html {
     margin: 1em 1em 0 0;
   }
 
-  .modal .desktop-nav a {
-    text-decoration: none;
-  }
-
   .introduction-texts .collaboration {
     margin-top: 4em;
   }
@@ -810,8 +809,6 @@ html {
     border: 1px solid #1a2236;
     color: #fff;
     padding: 1em 1.2em;
-    cursor: pointer;
-    text-decoration: none;
   }
 
   .desktop-header nav a:first-child {
@@ -820,14 +817,6 @@ html {
 
   .modal .modal-footer a i {
     padding-left: 2em;
-  }
-
-  .modal .desktop-nav a .fa-arrow-left {
-    padding-right: 1em;
-  }
-
-  .modal .desktop-nav a .fa-arrow-right {
-    padding-left: 1em;
   }
 
   .modal .modal-footer a:hover {
@@ -885,7 +874,7 @@ html {
     margin-top: 3em;
   }
 
-  footer button {
+  footer a {
     background-color: inherit;
     border: none;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -914,7 +903,7 @@ html {
     border: 1px solid #1a2236;
   }
 
-  .about-description .get-cv button {
+  .about-description .get-cv a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -938,7 +927,7 @@ html {
   }
 
   .introduction-texts .collaboration a:hover,
-  .about-description .get-cv button:hover,
+  .about-description .get-cv a:hover,
   .form .contact-collaboration button:hover {
     background-color: #fff;
     color: #1a2236;
@@ -946,7 +935,7 @@ html {
   }
 
   .introduction-texts .collaboration a:focus,
-  .about-description .get-cv button:focus,
+  .about-description .get-cv a:focus,
   .form .contact-collaboration button:focus {
     background-color: #fff;
     color: #1a2236;
@@ -1133,6 +1122,10 @@ html {
     background-size: 135px;
   }
 
+  #laptop-3 {
+    width: 80%;
+  }
+
   .grid-container .design-div-two {
     width: 100%;
     background-image: url('assets/img/right-image-geometry_5.svg');
@@ -1169,45 +1162,45 @@ html {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 27px;
     letter-spacing: -0.0525em;
   }
 
   .about .skills-wrapper .languages {
     background-color: #1c528a;
-    height: 18em;
+    height: 20em;
     background-image: url('assets/img/ic_languages_mob.svg');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
     color: #fff;
-    padding: 3em;
+    padding: 1.5em 3em;
   }
 
   .about .skills-wrapper .frameworks {
     background-color: #e2505c;
-    height: 18em;
+    height: 20em;
     background-image: url('assets/img/ic_framework.svg');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
     color: #fff;
-    padding: 3em;
+    padding: 1.5em 3em;
   }
 
   .about .skills-wrapper .skills {
     background-color: #febf52;
-    height: 18em;
+    height: 20em;
     background-image: url('assets/img/ic_skills.svg');
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
     color: #fff;
-    padding: 3em;
+    padding: 1em 3em;
   }
 
   .about .skills-wrapper .desktop-design {
@@ -1246,12 +1239,6 @@ html {
     font-size: 14px;
     line-height: 21px;
     padding-bottom: 2em;
-  }
-
-  .about .get-cv button img {
-    width: 2em;
-    height: 1em;
-    padding-left: 0.5em;
   }
 
   .form {
