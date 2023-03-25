@@ -894,7 +894,11 @@ a {
     border: 1px solid #1a2236;
   }
 
-  .desktop-card .desktop-card-description button {
+  .desktop-card-2 button,
+  .desktop-card-3 button,
+  .desktop-card-4 button,
+  .desktop-card-5 button,
+  .desktop-card-6 button {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1028,14 +1032,22 @@ a {
   }
 
   .card .card-description button:hover,
-  .desktop-card .desktop-card-description button:hover {
+  .desktop-card-2 button:hover,
+  .desktop-card-3 button:hover,
+  .desktop-card-4 button:hover,
+  .desktop-card-5 button:hover,
+  .desktop-card-6 button:hover {
     background-color: #1a2236;
     color: #fff;
     border: 1px solid #fff;
   }
 
   .card .card-description button:focus,
-  .desktop-card .desktop-card-description button:focus {
+  .desktop-card-2 button:focus,
+  .desktop-card-3 button:focus,
+  .desktop-card-4 button:focus,
+  .desktop-card-5 button:focus,
+  .desktop-card-6 button:focus {
     background-color: #1a2236;
     color: #fff;
     border: 2px solid #fff;
@@ -1043,53 +1055,80 @@ a {
 
   .project-desktop .grid-container {
     display: grid;
+    gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
     text-align: left;
+    margin-top: 2em;
   }
 
   .project-desktop .grid-container > * {
     width: 100%;
   }
 
-  .project-desktop .grid-container #laptop-1 {
-    position: relative;
-    top: 32%;
-    width: 100%;
-  }
-
-  .project-desktop .grid-container #laptop-grid-geo {
-    width: 100%;
-  }
-
-  .desktop-card {
-    position: absolute;
-  }
-
-  .desktop-card .desktop-card-description {
-    position: absolute;
-    right: 0;
-    width: 33.33%;
-  }
-
-  .desktop-card .desktop-card-description .desktop-description {
+  .desktop-card-2,
+  .desktop-card-3,
+  .desktop-card-4,
+  .desktop-card-5,
+  .desktop-card-6 {
     background-color: rgba(26, 34, 54, 0.95);
     padding: 2em;
     position: relative;
-    margin-top: 3em;
+    margin-top: 10em;
   }
 
-  .desktop-card .desktop-card-description #laptop-2 {
+  .desktop-card-container-2 {
+    background-image: url(assets/img/mobile-project-2/featured.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    display: block;
+    height: auto;
   }
 
-  .desktop-card .desktop-card-description #geo-design-3 {
-    float: right;
-    width: 175px;
+  .desktop-card-container-3 {
+    background-image: url(assets/img/mobile-project-3/featured.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
   }
 
-  .desktop-card .desktop-card-description p {
+  .desktop-card-container-4 {
+    background-image: url(assets/img/mobile-project-4/featured.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-card-container-5 {
+    background-image: url(assets/img/desktop-project-2/featured.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-card-container-6 {
+    background-image: url(assets/img/mobile-project-6/featured.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-card-design {
+    background-image: url(assets/img/grid-image-geometry.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .desktop-card-2 p,
+  .desktop-card-3 p,
+  .desktop-card-4 p,
+  .desktop-card-5 p,
+  .desktop-card-6 p {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -1097,12 +1136,20 @@ a {
     color: #fff;
   }
 
-  .desktop-card .desktop-card-description ul {
+  .desktop-card-2 ul,
+  .desktop-card-3 ul,
+  .desktop-card-4 ul,
+  .desktop-card-5 ul,
+  .desktop-card-6 ul {
     display: flex;
     padding: 1em 0;
   }
 
-  .desktop-card .desktop-card-description ul li {
+  .desktop-card-2 ul li,
+  .desktop-card-3 ul li,
+  .desktop-card-4 ul li,
+  .desktop-card-5 ul li,
+  .desktop-card-6 ul li {
     list-style: none;
     background-color: #98dede;
     padding: 0.5em;
@@ -1111,39 +1158,6 @@ a {
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
-  }
-
-  .grid-container #large-image {
-    grid-column: 1 / span 2;
-    background-image: url('assets/img/design-geometry-2.svg');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
-    background-size: 135px;
-  }
-
-  #laptop-3 {
-    width: 80%;
-  }
-
-  .grid-container .design-div-two {
-    width: 100%;
-    background-image: url('assets/img/right-image-geometry_5.svg');
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: top;
-  }
-
-  .grid-container .design-div-three {
-    width: 100%;
-    background-image: url('assets/img/left-image-geometry_4.svg');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: top;
-  }
-
-  .grid-container #last-image-grid {
-    width: 70%;
   }
 
   .about {

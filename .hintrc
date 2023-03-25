@@ -11,6 +11,7 @@
         ]
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "detect-css-reflows/layout": "off"
   }
 }
