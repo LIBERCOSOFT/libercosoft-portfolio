@@ -6,7 +6,7 @@ const cancel = document.querySelector('#cancel');
 const modal = document.querySelector('#modal');
 const cardContainer = document.getElementById('card-container');
 const desktopCard1 = document.querySelector('#first-desktop-card');
-const desktopCard2 = document.querySelector('#second-desktop-card');
+const otherProjectContainer = document.querySelector('#other-projects-container');
 
 const form = document.getElementById('contact-form');
 const contactName = document.getElementById('name');
@@ -63,12 +63,13 @@ const projectData = [
     preview3: 'assets/img/mobile-project-4/preview3.png',
     preview4: 'assets/img/mobile-project-4/preview4.png',
     technologies: ['Ruby', 'Terminal', 'RSpec'],
+    note: 'Please note: This is a terminal application, you have to run it in your terminal to see the live version, thanks.',
     liveLink: 'https://deploy-preview-6--lighthearted-druid-5c17e6.netlify.app/',
     sourceLink: 'https://github.com/LIBERCOSOFT/leaderboard',
   },
   {
     id: '5',
-    name: 'Budget App',
+    name: 'Budget Application',
     description: 'A Ruby on Rails application that allows users to register and log in, introduce new transactions associated with a category, and see the money spent on each category.',
     featuredImage: 'assets/img/desktop-project-2/featured.png',
     preview1: 'assets/img/desktop-project-2/preview1.png',
@@ -76,12 +77,13 @@ const projectData = [
     preview3: 'assets/img/desktop-project-2/preview3.png',
     preview4: 'assets/img/desktop-project-2/preview4.png',
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Postgres'],
+    note: 'Please note: Due to the hosting platform, it may take some time to load the live project, thanks.',
     liveLink: 'https://budget-app-9ny9.onrender.com/',
     sourceLink: 'https://github.com/LIBERCOSOFT/budget-app',
   },
   {
     id: '6',
-    name: 'Movie\'s List',
+    name: 'Movies List',
      description: 'This web application displays the list of movies from an external API. The webapp consist of two user interfaces. It has the home page with movies and a popup window with detail of the selected movie. User can also add comments and view comments on popup window.',
     featuredImage: 'assets/img/mobile-project-6/featured.png',
     preview1: 'assets/img/mobile-project-6/preview1.png',
@@ -100,11 +102,30 @@ const desktopData = [
     name: 'Bridal Cars Reservation',
     technologies: ['ReactJS', 'Ruby on Rails', 'Postgres'],
   },
-
+  {
+    id: 2,
+    name: 'Stock Market',
+    technologies: ['ReactJS', 'Redux', 'JEST'],
+  },
+  {
+    id: 3,
+    name: 'Leader Board',
+    technologies: ['HTML/CSS', 'JavaScript', 'Webpack'],
+  },
+  {
+    id: 4,
+    name: 'Catalog of Things',
+   technologies: ['Ruby', 'Terminal', 'RSpec'],
+  },
   {
     id: 5,
-    name: 'Budget',
-    technologies: ['HTML/CSS', 'Ruby on Rails', '+1'],
+    name: 'Budget Application',
+    technologies: ['HTML/CSS', 'Ruby on Rails', 'Postgres'],
+  },
+  {
+    id: 6,
+    name: 'Movies List',
+    technologies: ['HTML/CSS', 'JavaScript', 'Webpack'],
   },
 ];
 
@@ -136,6 +157,7 @@ const toggleModal = (e) => {
       const modalCarousel = document.querySelector('#modal-carousel');
       const modalCarouselPre = document.querySelector('#carousel-previews');
       const modalDescription = document.querySelector('#modal-description');
+      const modalNote = document.querySelector('#modal-note');
       const modLive = document.querySelector('#modal-live');
       const modSource = document.querySelector('#modal-source');
       modalHeader.innerHTML = `<h2>${project.name}</h2>`;
@@ -151,6 +173,11 @@ const toggleModal = (e) => {
       modalDescription.innerHTML = `<p class="project-description" id="modal-description">
             ${project.description}
       </p>`;
+      if(project.note) {
+        modalNote.innerHTML = `<b>${project.note}</b>`
+      }else {
+        modalNote.innerHTML = ''
+      }
       modLive.setAttribute('href', `${project.liveLink}`);
       modSource.setAttribute('href', `${project.sourceLink}`);
     }
@@ -212,26 +239,52 @@ card1.appendChild(ul1);
 card1.appendChild(button1);
 desktopCard1.prepend(card1);
 
-const card2 = document.createElement('div');
-card2.className = 'desktop-description';
-const projectName2 = document.createElement('p');
-projectName2.innerText = `${desktopData[1].name}`;
-const ul2 = document.createElement('ul');
-for (let i = 0; i < 3; i += 1) {
-  const li = document.createElement('li');
-  li.innerText = `${desktopData[1].technologies[i]}`;
-  ul2.appendChild(li);
+for (let i = desktopData.length - 1; i > 0; i--){
+  const cardContainer = document.createElement('div');
+  cardContainer.className = `desktop-card-container-${desktopData[i].id}`;
+  const card = document.createElement('div');
+  card.className = `desktop-card-${desktopData[i].id}`;
+  const projectName = document.createElement('p');
+  projectName.innerText = `${desktopData[i].name}`;
+  const ul = document.createElement('ul');
+  for (let u = 0; u < 3; u += 1) {
+    const li = document.createElement('li');
+    li.innerText = `${desktopData[i].technologies[u]}`;
+    ul.appendChild(li);
+  }
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.id = `${desktopData[i].id}`;
+  button.className = 'desktop-see-project';
+  button.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
+  button.addEventListener('click', toggleModal);
+  card.appendChild(projectName);
+  card.appendChild(ul);
+  card.appendChild(button);
+  cardContainer.appendChild(card)
+  otherProjectContainer.prepend(cardContainer);
 }
-const button2 = document.createElement('button');
-button2.type = 'button';
-button2.id = `${desktopData[1].id}`;
-button2.className = 'desktop-see-project';
-button2.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
-button2.addEventListener('click', toggleModal);
-card2.appendChild(projectName2);
-card2.appendChild(ul2);
-card2.appendChild(button2);
-desktopCard2.prepend(card2);
+
+// const card2 = document.createElement('div');
+// card2.className = 'desktop-description';
+// const projectName2 = document.createElement('p');
+// projectName2.innerText = `${desktopData[1].name}`;
+// const ul2 = document.createElement('ul');
+// for (let i = 0; i < 3; i += 1) {
+//   const li = document.createElement('li');
+//   li.innerText = `${desktopData[1].technologies[i]}`;
+//   ul2.appendChild(li);
+// }
+// const button2 = document.createElement('button');
+// button2.type = 'button';
+// button2.id = `${desktopData[1].id}`;
+// button2.className = 'desktop-see-project';
+// button2.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
+// button2.addEventListener('click', toggleModal);
+// card2.appendChild(projectName2);
+// card2.appendChild(ul2);
+// card2.appendChild(button2);
+// desktopCard2.prepend(card2);
 
 form.addEventListener('submit', (event) => {
   const { value } = form.elements.email;
