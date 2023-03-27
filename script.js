@@ -17,7 +17,7 @@ const projectData = [
   {
     id: '1',
     name: 'Bridal Cars Reservation',
-    description: 'Bridal cars is a full stack application that allows users to reserve a bridal car. It uses React in the front end and RoR(Ruby on Rails) as an API. Using this app, users can log in by typing username and password. Once logged in, they are able to see all the available cars, the car details and can reserve a car.',
+    description: 'Bridal cars is a full-stack application that allows users to reserve a bridal car. It uses React in the front end and RoR(Ruby on Rails) as an API. Using this app, users can log in by typing their username and password. Once logged in, they can see all the available cars, and the car details and can reserve a car.',
     featuredImage: 'assets/img/desktop-project-1/featured.png',
     preview1: 'assets/img/desktop-project-1/preview-1.png',
     preview2: 'assets/img/desktop-project-1/preview-2.png',
@@ -30,7 +30,7 @@ const projectData = [
   {
     id: '2',
     name: 'Stock Market',
-    description: 'A stock market web application that gives the details of over 3000 stocks. Further, it group the stocks in sectors, e.g Technology, Communication, and so on.',
+    description: 'A stock market web application that gives the details of over 3000 stocks. Further, it groups the stocks into sectors, e.g Technology, Communication, and so on.',
     featuredImage: 'assets/img/mobile-project-2/featured.png',
     preview1: 'assets/img/mobile-project-2/preview1.png',
     preview2: 'assets/img/mobile-project-2/preview2.png',
@@ -56,7 +56,7 @@ const projectData = [
   {
     id: '4',
     name: 'Catalog of Things',
-    description: 'Catalog of Things is a console application that allows users to keep track of their favourite things! A user can add records of their books, music albums and games and can also list them. The data will be saved in .json files. The data will be automatically loaded each time the application starts.',
+    description: 'Catalog of Things is a console application that allows users to keep track of their favorite things! Users can add records of their books, music albums, and games and can also list them. The data will be saved in .json files. The data will be automatically loaded each time the application starts.',
     featuredImage: 'assets/img/mobile-project-4/featured.png',
     preview1: 'assets/img/mobile-project-4/preview1.png',
     preview2: 'assets/img/mobile-project-4/preview2.png',
@@ -83,7 +83,7 @@ const projectData = [
   {
     id: '6',
     name: 'Movies Catalogue',
-     description: 'This web application displays the list of movies from an external API. The web application consist of two user interfaces. It has the home page with movies and a popup window with detail of the selected movie. User can also add comments and view comments on popup window.',
+     description: 'This web application displays the list of movies from an external API. The web application consists of two user interfaces. It has a home page with movies and a popup window with detail of the selected movie. Users can also add comments and view comments on the popup window.',
     featuredImage: 'assets/img/mobile-project-6/featured.png',
     preview1: 'assets/img/mobile-project-6/preview1.png',
     preview2: 'assets/img/mobile-project-6/preview2.png',
