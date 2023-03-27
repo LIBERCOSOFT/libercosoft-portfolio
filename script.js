@@ -77,14 +77,13 @@ const projectData = [
     preview3: 'assets/img/desktop-project-2/preview3.png',
     preview4: 'assets/img/desktop-project-2/preview4.png',
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Postgres'],
-    note: 'Please note: Due to the hosting platform, it may take some time to load the live project, thanks.',
-    liveLink: 'https://budget-app-9ny9.onrender.com/',
+    liveLink: 'https://budget-app-production-3559.up.railway.app/',
     sourceLink: 'https://github.com/LIBERCOSOFT/budget-app',
   },
   {
     id: '6',
-    name: 'Movies List',
-     description: 'This web application displays the list of movies from an external API. The webapp consist of two user interfaces. It has the home page with movies and a popup window with detail of the selected movie. User can also add comments and view comments on popup window.',
+    name: 'Movies Catalogue',
+     description: 'This web application displays the list of movies from an external API. The web application consist of two user interfaces. It has the home page with movies and a popup window with detail of the selected movie. User can also add comments and view comments on popup window.',
     featuredImage: 'assets/img/mobile-project-6/featured.png',
     preview1: 'assets/img/mobile-project-6/preview1.png',
     preview2: 'assets/img/mobile-project-6/preview2.png',
@@ -124,7 +123,7 @@ const desktopData = [
   },
   {
     id: 6,
-    name: 'Movies List',
+    name: 'Movies Catalogue',
     technologies: ['HTML/CSS', 'JavaScript', 'Webpack'],
   },
 ];
@@ -264,27 +263,6 @@ for (let i = desktopData.length - 1; i > 0; i--){
   cardContainer.appendChild(card)
   otherProjectContainer.prepend(cardContainer);
 }
-
-// const card2 = document.createElement('div');
-// card2.className = 'desktop-description';
-// const projectName2 = document.createElement('p');
-// projectName2.innerText = `${desktopData[1].name}`;
-// const ul2 = document.createElement('ul');
-// for (let i = 0; i < 3; i += 1) {
-//   const li = document.createElement('li');
-//   li.innerText = `${desktopData[1].technologies[i]}`;
-//   ul2.appendChild(li);
-// }
-// const button2 = document.createElement('button');
-// button2.type = 'button';
-// button2.id = `${desktopData[1].id}`;
-// button2.className = 'desktop-see-project';
-// button2.innerHTML = 'See this project <i class="fa-solid fa-arrow-right"></i>';
-// button2.addEventListener('click', toggleModal);
-// card2.appendChild(projectName2);
-// card2.appendChild(ul2);
-// card2.appendChild(button2);
-// desktopCard2.prepend(card2);
 
 form.addEventListener('submit', (event) => {
   const { value } = form.elements.email;
