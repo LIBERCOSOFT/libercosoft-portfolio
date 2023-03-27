@@ -623,6 +623,11 @@ a {
     display: none;
   }
 
+  #desktop-top-spacer {
+    height: 3.9em;
+    background-color: #e04a54;
+  }
+
   i {
     padding-left: 1em;
   }
@@ -659,7 +664,7 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 80%;
   }
 
@@ -720,7 +725,7 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 27px;
     color: #1a2236;
     width: 50%;
@@ -737,7 +742,7 @@ a {
     left: 0;
     right: 0;
     background-color: #fff;
-    padding: 2em 0;
+    padding: 1em 0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -791,7 +796,7 @@ a {
     color: #1a2236;
     border: 1px solid #1a2236;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
     margin: 1em 1em 0 0;
   }
 
@@ -808,7 +813,7 @@ a {
     background-color: #1a2236;
     border: 1px solid #1a2236;
     color: #fff;
-    padding: 1em 1.2em;
+    padding: 0.8em 1em;
   }
 
   .desktop-header nav a:first-child {
@@ -837,14 +842,14 @@ a {
     background-position-x: right;
     background-position-y: bottom;
     background-size: 102px;
-    padding: 0 5em;
+    padding: 3em 5em;
   }
 
   .introduction-texts h1 {
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 110px;
+    font-size: 80px;
     line-height: 100%;
     animation: zoomin 1s linear 1;
     animation-delay: 2s;
@@ -871,7 +876,7 @@ a {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: -0.01em;
-    margin-top: 3em;
+    margin: 3em 4em 0 0;
   }
 
   footer a {
@@ -889,7 +894,7 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     padding: 0.5em;
     border: 1px solid #1a2236;
   }
@@ -902,7 +907,7 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     padding: 0.5em;
     border: 1px solid #1a2236;
   }
@@ -915,7 +920,7 @@ a {
     background-color: #1a2236;
     border: 1px solid #1a2236;
     color: #fff;
-    padding: 1em 2.5em;
+    padding: 0.8em 1.8em;
   }
 
   .form .contact-collaboration button {
@@ -925,9 +930,9 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 27px;
-    padding: 1em;
+    padding: 0.8em;
   }
 
   .introduction-texts .collaboration a:hover,
@@ -1010,14 +1015,14 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 40px;
     color: #fff;
   }
 
   .card .card-description ul {
     display: flex;
     padding-top: 1em;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
   }
 
   .card .card-description ul li {
@@ -1028,7 +1033,7 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .card .card-description button:hover,
@@ -1072,8 +1077,9 @@ a {
   .desktop-card-6 {
     background-color: rgba(26, 34, 54, 0.95);
     padding: 2em;
-    position: relative;
-    margin-top: 10em;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
   }
 
   .desktop-card-container-2 {
@@ -1081,7 +1087,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 378px;
+    position: relative;
   }
 
   .desktop-card-container-3 {
@@ -1089,7 +1096,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 378px;
+    position: relative;
   }
 
   .desktop-card-container-4 {
@@ -1097,7 +1105,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 378px;
+    position: relative;
   }
 
   .desktop-card-container-5 {
@@ -1105,7 +1114,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 378px;
+    position: relative;
   }
 
   .desktop-card-container-6 {
@@ -1113,7 +1123,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 378px;
+    position: relative;
   }
 
   .desktop-card-design {
@@ -1121,7 +1132,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 378px;
+    position: relative;
   }
 
   .desktop-card-2 p,
@@ -1132,7 +1144,7 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
   }
 
@@ -1157,7 +1169,7 @@ a {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1em;
   }
 
   .about {
@@ -1224,7 +1236,7 @@ a {
     background-position-y: bottom;
     background-size: 222px;
     color: #fff;
-    padding: 3em;
+    height: 20em;
   }
 
   .about .about-description {
@@ -1235,7 +1247,7 @@ a {
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 110px;
+    font-size: 90px;
     line-height: 100%;
   }
 
@@ -1243,7 +1255,7 @@ a {
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 110px;
+    font-size: 90px;
   }
 
   .about .about-description p {
@@ -1343,6 +1355,58 @@ a {
     background-color: #1a2236;
     display: flex;
     justify-content: space-between;
-    padding: 2em 10em;
+    padding: 1em 10em;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 769px) and (max-width: 1100px){
+
+  .desktop-header nav a {
+    margin: 0 0.5em;
+  }
+
+  .desktop-card-2 ul,
+  .desktop-card-3 ul,
+  .desktop-card-4 ul,
+  .desktop-card-5 ul,
+  .desktop-card-6 ul {
+    display: block;
+  }
+
+  .desktop-card-2 ul li,
+  .desktop-card-3 ul li,
+  .desktop-card-4 ul li,
+  .desktop-card-5 ul li,
+  .desktop-card-6 ul li {
+    margin: 0.5em 0;
+  }
+
+  .about .skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .about .skills-wrapper .languages,
+  .about .skills-wrapper .frameworks,
+  .about .skills-wrapper .skills{
+    padding: 1em 2em 1em 1em;
+    width: 15em;
+  }
+
+  .about .about-description {
+    margin-top: 5em;
+  }
+
+  .about .skills-wrapper .desktop-design {
+    display: none;
+  }
+
+  .form {
+    padding: 10em;
+  }
+
+  footer {
+    padding: 1em 5em;
   }
 }
