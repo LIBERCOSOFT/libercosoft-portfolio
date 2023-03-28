@@ -50,7 +50,7 @@ const projectData = [
     preview3: 'assets/img/mobile-project-3/featured.png',
     preview4: 'assets/img/mobile-project-3/preview1.png',
     technologies: ['HTML/CSS', 'JavaScript', 'Webpack'],
-    liveLink: 'https://deploy-preview-6--lighthearted-druid-5c17e6.netlify.app/',
+    liveLink: 'https://libercosoft.github.io/leaderboard/dist/',
     sourceLink: 'https://github.com/LIBERCOSOFT/leaderboard',
   },
   {
@@ -64,8 +64,8 @@ const projectData = [
     preview4: 'assets/img/mobile-project-4/preview4.png',
     technologies: ['Ruby', 'Terminal', 'RSpec'],
     note: 'Please note: This is a terminal application, you have to run it in your terminal to see the live version, thanks.',
-    liveLink: 'https://deploy-preview-6--lighthearted-druid-5c17e6.netlify.app/',
-    sourceLink: 'https://github.com/LIBERCOSOFT/leaderboard',
+    liveLink: 'https://drive.google.com/file/d/1a0-J0hlMK3N7mvYvvI_gE2-uejfBQUCV/view',
+    sourceLink: 'https://github.com/laiifuu/Things-Catalog',
   },
   {
     id: '5',
